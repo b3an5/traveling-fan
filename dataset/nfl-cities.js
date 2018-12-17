@@ -3,192 +3,224 @@ const nflTeams = [
     "name": "Arizona Cardinals",
     "state": "Arizona",
     "city": "Glendale",
+    "helmet_image": "http://content.sportslogos.net/logos/7/177/thumbs/kwth8f1cfa2sch5xhjjfaof90.gif",
     "division": "NFC West"
   },
   {
     "name": "Atlanta Falcons",
     "state": "Georgia",
     "city": "Atlanta",
+    "helmet_image": "http://content.sportslogos.net/logos/7/173/thumbs/299.gif",
     "division": "NFC South"
   },
   {
     "name": "Baltimore Ravens",
     "state": "Maryland",
     "city": "Baltimore",
+    "helmet_image": "http://content.sportslogos.net/logos/7/153/thumbs/318.gif",
     "division": "AFC North"
   },
   {
     "name": "Buffalo Bills",
     "state": "New York",
     "city": "Orchard Park",
+    "helmet_image": "http://content.sportslogos.net/logos/7/149/thumbs/n0fd1z6xmhigb0eej3323ebwq.gif",
     "division": "AFC East"
   },
   {
     "name": "Carolina Panthers",
     "state": "North Carolina",
     "city": "Charlotte",
+    "helmet_image": "http://content.sportslogos.net/logos/7/174/thumbs/f1wggq2k8ql88fe33jzhw641u.gif",
     "division": "NFC South"
   },
   {
     "name": "Chicago Bears",
     "state": "Illinois",
     "city": "Chicago",
+    "helmet_image": "http://content.sportslogos.net/logos/7/169/thumbs/364.gif",
     "division": "NFC North"
   },
   {
     "name": "Cincinnati Bengals",
     "state": "Ohio",
     "city": "Cincinnati",
+    "helmet_image": "http://content.sportslogos.net/logos/7/154/thumbs/403.gif",
     "division": "AFC North"
   },
   {
     "name": "Cleveland Browns",
     "state": "Ohio",
     "city": "Cleveland",
+    "helmet_image": "http://content.sportslogos.net/logos/7/155/thumbs/15578552015.gif",
     "division": "AFC North"
   },
   {
     "name": "Dallas Cowboys",
     "state": "Texas",
     "city": "Frisco",
+    "helmet_image": "http://content.sportslogos.net/logos/7/165/thumbs/406.gif",
     "division": "NFC East"
   },
   {
     "name": "Denver Broncos",
     "state": "Colorado",
     "city": "Denver",
+    "helmet_image": "http://content.sportslogos.net/logos/7/161/thumbs/9ebzja2zfeigaziee8y605aqp.gif",
     "division": "AFC West"
   },
   {
     "name": "Detroit Lions",
     "state": "Michigan",
     "city": "Detroit",
+    "helmet_image": "http://content.sportslogos.net/logos/7/170/thumbs/17013982017.gif",
     "division": "NFC North"
   },
   {
     "name": "Green Bay Packers",
     "state": "Wisconsin",
     "city": "Green Bay",
+    "helmet_image": "http://content.sportslogos.net/logos/7/171/thumbs/dcy03myfhffbki5d7il3.gif",
     "division": "NFC North"
   },
   {
     "name": "Houston Texans",
     "state": "Texas",
     "city": "Houston",
+    "helmet_image": "http://content.sportslogos.net/logos/7/157/thumbs/570.gif",
     "division": "AFC South"
   },
   {
     "name": "Indianapolis Colts",
     "state": "Indiana",
     "city": "Indianapolis",
+    "helmet_image": "http://content.sportslogos.net/logos/7/158/thumbs/593.gif",
     "division": "AFC South"
   },
   {
     "name": "Jacksonville Jaguars",
     "state": "Florida",
     "city": "Jacksonville",
+    "helmet_image": "http://content.sportslogos.net/logos/7/159/thumbs/15988562013.gif",
     "division": "AFC South"
   },
   {
     "name": "Kansas City Chiefs",
     "state": "Kansas",
     "city": "Kansas City",
+    "helmet_image": "http://content.sportslogos.net/logos/7/162/thumbs/857.gif",
     "division": "AFC West"
   },
   {
     "name": "Miami Dolphins",
     "state": "Florida",
     "city": "Miami",
+    "helmet_image": "http://content.sportslogos.net/logos/7/6446/thumbs/644624152017.gif",
     "division": "AFC East"
   },
   {
     "name": "Minnesota Vikings",
     "state": "Minnesota",
     "city": "Minneapolis",
+    "helmet_image": "http://content.sportslogos.net/logos/7/172/thumbs/17227042013.gif",
     "division": "NFC North"
   },
   {
     "name": "New England Patriots",
     "state": "Massachusetts",
     "city": "Foxborough",
+    "helmet_image": "http://content.sportslogos.net/logos/7/151/thumbs/y71myf8mlwlk8lbgagh3fd5e0.gif",
     "division": "AFC East"
   },
   {
     "name": "New Orleans Saints",
     "state": "Louisiana",
     "city": "New Orleans",
+    "helmet_image": "http://content.sportslogos.net/logos/7/175/thumbs/907.gif",
     "division": "NFC South"
   },
   {
     "name": "New York Giants",
     "state": "New York",
     "city": "East Rutherford",
+    "helmet_image": "http://content.sportslogos.net/logos/7/166/thumbs/919.gif",
     "division": "NFC East"
   },
   {
     "name": "New York Jets",
     "state": "New York",
     "city": "East Rutherford",
+    "helmet_image": "http://content.sportslogos.net/logos/7/152/thumbs/v7tehkwthrwefgounvi7znf5k.gif",
     "division": "AFC East"
   },
   {
     "name": "Oakland Raiders",
     "state": "California",
     "city": "Oakland",
+    "helmet_image": "http://content.sportslogos.net/logos/7/163/thumbs/g9mgk6x3ge26t44cccm9oq1vl.gif",
     "division": "AFC West"
   },
   {
     "name": "Philadelphia Eagles",
     "state": "Pennsylvania",
     "city": "Philadelphia",
+    "helmet_image": "http://content.sportslogos.net/logos/7/167/thumbs/960.gif",
     "division": "NFC East"
   },
   {
     "name": "Pittsburgh Steelers",
     "state": "Pennsylvania",
     "city": "Pittsburgh",
+    "helmet_image": "http://content.sportslogos.net/logos/7/156/thumbs/970.gif",
     "division": "AFC North"
   },
   {
-    "name": "St. Louis Rams",
-    "state": "Missouri",
-    "city": "St. Louis",
+    "name": "Los Angeles Rams",
+    "state": "California",
+    "city": "Los Angeles",
+    "helmet_image": "http://content.sportslogos.net/logos/7/5941/thumbs/594179532017.gif",
     "division": "NFC West"
   },
   {
-    "name": "San Diego Chargers",
+    "name": "Los Angeles Chargers",
     "state": "California",
     "city": "San Diego",
+    "helmet_image": "http://content.sportslogos.net/logos/7/6446/thumbs/644624152017.gif",
     "division": "AFC West"
   },
   {
     "name": "San Francisco 49ers",
     "state": "California",
     "city": "San Francisco",
+    "helmet_image": "http://content.sportslogos.net/logos/7/179/thumbs/17994552009.gif",
     "division": "NFC West"
   },
   {
     "name": "Seattle Seahawks",
     "state": "Washington",
     "city": "Seattle",
+    "helmet_image": "http://content.sportslogos.net/logos/7/180/thumbs/pfiobtreaq7j0pzvadktsc6jv.gif",
     "division": "NFC West"
   },
   {
     "name": "Tampa Bay Buccaneers",
     "state": "Florida",
     "city": "Tampa",
+    "helmet_image": "http://content.sportslogos.net/logos/7/176/thumbs/17636702014.gif",
     "division": "NFC South"
   },
   {
     "name": "Tennessee Titans",
     "state": "Tennessee",
     "city": "Nashville",
+    "helmet_image": "http://content.sportslogos.net/logos/7/160/thumbs/1053.gif",
     "division": "AFC South"
   },
   {
     "name": "Washington Redskins",
     "state": "Maryland",
     "city": "Ashburn",
+   "helmet_image": "http://content.sportslogos.net/logos/7/168/thumbs/im5xz2q9bjbg44xep08bf5czq.gif",
     "division": "NFC East"
   }
 ]
