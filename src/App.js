@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import { nflTeams, cities } from 'nfl-cities.js'
-import Container from 'Container.js'
+import { nflTeams, cities } from './dataset/nfl-cities'
+import Container from './Container.js'
 import './App.css';
 
 class App extends Component {
