@@ -365,16 +365,9 @@ const cities = [
   {
     "name": "Los Angeles",
     "state": "California",
-  "city-image": "https://cdn.vox-cdn.com/thumbor/T5NXYhdizR3NF6iaq0HjogdRATg=/0x0:2500x1118/1200x800/filters:focal(1050x359:1450x759)/cdn.vox-cdn.com/uploads/chorus_image/image/53973243/LA_2030.0.jpg",
-    "population": 308626,
-    "attractions": ["Gateway Arch", "Gateway Arch Museum", "Missouri Botannical Gardens", "City Museum"]
-  },
-  {
-    "name": "San Diego",
-    "state": "California",
     "city-image": "https://cdn.trolleytours.com/wp-content/uploads/2016/06/san-diego-skyline-dusk.jpg",
     "population": 1419516,
-    "attractions": ["Balboa Park", "SeaWorld", "San Diego Zoo", "USS Midway Museum"]
+    "attractions": ["Universal Studios Hollywood", "Disneyland", "Hollywood Walk of Fame", "Hollywood sign"]
   },
   {
     "name": "San Francisco",
