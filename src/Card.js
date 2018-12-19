@@ -9,6 +9,7 @@ export default class Card extends Component {
     }
   }
 
+
   findMatchingCity = () => {
     let matchingCity = this.props.cities.find((city) => {
       return this.props.nflTeams[this.props.clickedIndex].city === city.name
