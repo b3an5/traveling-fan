@@ -21,8 +21,8 @@ export default class Container extends Component {
       return(
         <main>
           {
-            this.props.nflTeams.map((nflTeam) => {
-              return <TeamIcon toggleCardView={this.toggleCardView} nflTeam={nflTeam} />
+            this.props.nflTeams.map((nflTeam, index) => {
+              return <TeamIcon toggleCardView={this.toggleCardView} nflTeam={nflTeam} index={index} />
             })
           }
         </main>
@@ -31,7 +31,8 @@ export default class Container extends Component {
       return (
         <main>
           <Card nflTeams={this.props.nflTeams} 
-                cities={this.props.cities} />
+                cities={this.props.cities}
+                toggleCardView={this.toggleCardView} />
         </main>
       )
     }

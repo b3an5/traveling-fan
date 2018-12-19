@@ -16,14 +16,15 @@ export default class Card extends Component {
   }
 
   render() {
-    let hrefExample1 = this.props.cities[0].attractions[0].trim().split(' ').join('%20')
+    const xIcon = 'X';
 
     if (this.state.teamInfo) {
       return (
         <div>
+          <h1 onClick={this.props.toggleCardView}>{xIcon}</h1>
           <img src={this.props.nflTeams[0].team_img} />
           <h2>{this.props.nflTeams[0].name}</h2>
-          <h2>{this.props.nflTeams[0].city}</h2>
+          <h2>{this.props.nflTeams[0].city}, {this.props.nflTeams[0].state}</h2>
           <h2>{this.props.nflTeams[0].division}</h2>
           <button onClick={this.toggleCityInfo}>Show City Info</button>
         </div>
@@ -31,6 +32,7 @@ export default class Card extends Component {
     } else {
       return (
         <div>
+          <h1 onClick={this.props.toggleCardView}>{xIcon}</h1>
           <img src={this.props.cities[0].city_image} />
           <h2>{this.props.cities[0].name}</h2>
           <h2>{this.props.cities[0].state}</h2>
