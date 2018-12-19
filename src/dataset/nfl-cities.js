@@ -210,7 +210,7 @@ const nflTeams = [
   {
     "name": "Los Angeles Chargers",
     "state": "California",
-    "city": "San Diego",
+    "city": "Los Angeles",
     "helmet_image": "http://content.sportslogos.net/logos/7/6446/thumbs/644624152017.gif",
     "division": "AFC West",
     "team_img": "https://cdn.vox-cdn.com/thumbor/wh2AKZa3minPgXTXx0JhLecXhV8=/0x0:3435x2290/1200x800/filters:focal(1576x661:2124x1209)/cdn.vox-cdn.com/uploads/chorus_image/image/61134183/usa_today_10458932.0.jpg"
