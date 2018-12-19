@@ -6,7 +6,8 @@ export default class Container extends Component {
   constructor() {
     super();
     this.state = {
-      enlargeCard: false
+      enlargeCard: false,
+      clickedIndex: undefined
     }
   }
 
@@ -16,13 +17,23 @@ export default class Container extends Component {
     })
   }
 
+  grabIndex = (clickedTeam) => {
+    console.log(clickedTeam)
+    this.setState({
+      clickedIndex: clickedTeam
+    })
+  }
+
   render() {
     if(this.state.enlargeCard === false) {
       return(
         <main>
           {
             this.props.nflTeams.map((nflTeam, index) => {
-              return <TeamIcon toggleCardView={this.toggleCardView} nflTeam={nflTeam} index={index} />
+              return <TeamIcon toggleCardView={this.toggleCardView} 
+                               nflTeam={nflTeam} 
+                               index={index}
+                               grabIndex={this.grabIndex} />
             })
           }
         </main>
@@ -32,7 +43,8 @@ export default class Container extends Component {
         <main>
           <Card nflTeams={this.props.nflTeams} 
                 cities={this.props.cities}
-                toggleCardView={this.toggleCardView} />
+                toggleCardView={this.toggleCardView}
+                clickedIndex={this.state.clickedIndex} />
         </main>
       )
     }

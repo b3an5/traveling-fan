@@ -1,12 +1,26 @@
-import React from 'react';
+import React, { Component } from 'react';
 
-export default function TeamIcon(props) {
-  return(
-    <article onClick={props.toggleCardView}>
-    {console.log(props.index)}
-      <img src={props.nflTeam.helmet_image} /> 
-      <h2>{props.nflTeam.name}</h2>
-    </article>
-  )
+export default class TeamIcon extends Component {
+  constructor() {
+    super();
+    this.state = {
+      index: null //this isn't needed but it gets mad when the constructor is empty
+    }
+  }
+
+    iconFunctions = () => {
+      this.props.toggleCardView();
+      this.props.grabIndex(this.props.index)
+    }
+
+  render() {
+    return(
+      <article onClick={this.iconFunctions}>
+      {console.log(this.props.index)}
+        <img src={this.props.nflTeam.helmet_image} /> 
+        <h2>{this.props.nflTeam.name}</h2>
+      </article>
+    )
+  }
 }
 
