@@ -1,14 +1,27 @@
 import React, { Component } from 'react';
 import TeamIcon from './TeamIcon.js';
+import Card from './Card.js';
 import './Container.scss';
-// import Card from './Card.js';
 
 export default class Container extends Component {
   constructor() {
     super();
     this.state = {
-      enlargeCard: false
+      enlargeCard: false,
+      clickedIndex: undefined
     }
+  }
+
+  toggleCardView = () => {
+    this.setState({
+      enlargeCard: !this.state.enlargeCard
+    })
+  }
+
+  grabIndex = (clickedTeam) => {
+    this.setState({
+      clickedIndex: clickedTeam
+    })
   }
 
   render() {
@@ -16,20 +29,24 @@ export default class Container extends Component {
       return(
         <main className="main-display">
           {
-            this.props.nflTeams.map((nflTeam) => {
-              return <TeamIcon nflTeam={nflTeam} />
+            this.props.nflTeams.map((nflTeam, index) => {
+              return <TeamIcon toggleCardView={this.toggleCardView} 
+                               nflTeam={nflTeam} 
+                               index={index}
+                               grabIndex={this.grabIndex} />
             })
           }
         </main>
       )
-        }
-    // } else {
-    //   return (
-    //     <main>
-    //       <Card nflTeams={this.props.nflTeams} 
-    //             cities={this.props.cities} />
-    //     </main>
-    //   )
-    // }
+    } else {
+      return (
+        <main>
+          <Card nflTeams={this.props.nflTeams} 
+                cities={this.props.cities}
+                toggleCardView={this.toggleCardView}
+                clickedIndex={this.state.clickedIndex} />
+        </main>
+      )
+    }
   }
 }
