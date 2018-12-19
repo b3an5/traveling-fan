@@ -1,0 +1,16 @@
+/** {
+  box-sizing: border-box;
+}*/
+
+.main-display {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.flex {
+  background: url('https://media.difabiosevents.com/media/2018/10/586928424-nfl-football-field-wallpaper.jpg');
+}
+

@@ -1,4 +1,6 @@
 import React from 'react';
+import './reset.css';
+import './TeamIcon.scss';
 
 export default function teamIcon() {
 

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import TeamIcon from './TeamIcon.js';
 import Card from './Card.js';
+import './Container.scss';
 
 export default class Container extends Component {
   constructor() {
@@ -26,7 +27,7 @@ export default class Container extends Component {
   render() {
     if(this.state.enlargeCard === false) {
       return(
-        <main>
+        <main className="main-display">
           {
             this.props.nflTeams.map((nflTeam, index) => {
               return <TeamIcon toggleCardView={this.toggleCardView} 
