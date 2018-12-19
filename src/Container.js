@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import TeamIcon from './TeamIcon.js';
+import './Container.scss';
 // import Card from './Card.js';
 
 export default class Container extends Component {
@@ -13,7 +14,7 @@ export default class Container extends Component {
   render() {
     if(this.state.enlargeCard === false) {
       return(
-        <main>
+        <main className="main-display">
           {
             this.props.nflTeams.map((nflTeam) => {
               return <TeamIcon nflTeam={nflTeam} />

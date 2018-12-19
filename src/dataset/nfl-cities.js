@@ -3,7 +3,7 @@ const nflTeams = [
     "name": "Arizona Cardinals",
     "state": "Arizona",
     "city": "Glendale",
-    "helmet_image": "http://content.sportslogos.net/logos/7/177/thumbs/kwth8f1cfa2sch5xhjjfaof90.gif",
+    "team_icon": "http://assets.stickpng.com/thumbs/580b585b2edbce24c47b2aff.png",
     "division": "NFC West",
     "team_img": "https://cdn.vox-cdn.com/thumbor/M5Gx-DCa9eRAqw_aqIyuG6I2wDo=/0x0:4777x3021/1200x800/filters:focal(2094x550:2858x1314)/cdn.vox-cdn.com/uploads/chorus_image/image/62274919/usa_today_11648254.0.jpg"
   },
@@ -11,7 +11,7 @@ const nflTeams = [
     "name": "Atlanta Falcons",
     "state": "Georgia",
     "city": "Atlanta",
-    "helmet_image": "http://content.sportslogos.net/logos/7/173/thumbs/299.gif",
+    "team_icon": "https://seeklogo.net/wp-content/uploads/2012/12/atlanta-falcons-logo-vector.png",
     "division": "NFC South",
     "team_img": "https://i1.wp.com/atlsportshq.com/wp-content/uploads/2018/09/Atlanta-Falcons.jpg?fit=1200%252C800&ssl=1"
   },
@@ -19,7 +19,7 @@ const nflTeams = [
     "name": "Baltimore Ravens",
     "state": "Maryland",
     "city": "Baltimore",
-    "helmet_image": "http://content.sportslogos.net/logos/7/153/thumbs/318.gif",
+    "team_icon": "https://seeklogo.net/wp-content/uploads/2012/05/baltimore-ravens-logo-vector-01.png",
     "division": "AFC North",
     "team_img": "https://cdn.vox-cdn.com/thumbor/o1P7MUtp_TXde4tiyo2VRjtmzTw=/0x0:3292x2195/1200x0/filters:focal(0x0:3292x2195):no_upscale()/cdn.vox-cdn.com/uploads/chorus_asset/file/13453589/usa_today_11692672.jpg"
   },
@@ -27,7 +27,7 @@ const nflTeams = [
     "name": "Buffalo Bills",
     "state": "New York",
     "city": "Orchard Park",
-    "helmet_image": "http://content.sportslogos.net/logos/7/149/thumbs/n0fd1z6xmhigb0eej3323ebwq.gif",
+    "team_icon": "https://seeklogo.net/wp-content/uploads/2012/05/buffalo-bills-logo-vector-01.png",
     "division": "AFC East",
     "team_img": "https://cdn.vox-cdn.com/thumbor/DyCzl4myyYqLQMSSUUcZLlfnnj0=/0x0:3000x2001/1200x800/filters:focal(1270x441:1750x921)/cdn.vox-cdn.com/uploads/chorus_image/image/62278687/1066286570.jpg.0.jpg"
   },
@@ -35,7 +35,7 @@ const nflTeams = [
     "name": "Carolina Panthers",
     "state": "North Carolina",
     "city": "Charlotte",
-    "helmet_image": "http://content.sportslogos.net/logos/7/174/thumbs/f1wggq2k8ql88fe33jzhw641u.gif",
+    "team_icon": "https://seeklogo.net/wp-content/uploads/2012/11/carolina-panthers-logo-vector.png",
     "division": "NFC South",
     "team_img": "https://cdn.vox-cdn.com/thumbor/k0_dfoinJT7NfQwHe_38sT1KIBI=/0x391:3406x2662/1200x800/filters:focal(0x391:3406x2662)/cdn.vox-cdn.com/uploads/chorus_image/image/22721837/20130922_bsd_sd2_380.0.jpg"
   },
@@ -43,7 +43,7 @@ const nflTeams = [
     "name": "Chicago Bears",
     "state": "Illinois",
     "city": "Chicago",
-    "helmet_image": "http://content.sportslogos.net/logos/7/169/thumbs/364.gif",
+    "team_icon": "https://seeklogo.net/wp-content/uploads/2011/05/chicago-bears-logo-vector.png",
     "division": "NFC North",
     "team_img": "https://cdn.vox-cdn.com/thumbor/ACoZo11grrnn0BWy8WGtGnOCpbA=/0x0:2812x2612/1200x800/filters:focal(1178x356:1626x804)/cdn.vox-cdn.com/uploads/chorus_image/image/62317433/1060356782.jpg.0.jpg"
   },
@@ -51,7 +51,7 @@ const nflTeams = [
     "name": "Cincinnati Bengals",
     "state": "Ohio",
     "city": "Cincinnati",
-    "helmet_image": "http://content.sportslogos.net/logos/7/154/thumbs/403.gif",
+    "team_icon": "https://seeklogo.net/wp-content/uploads/2012/05/cincinnati-bengals-logo-vector-01.png",
     "division": "AFC North",
     "team_img": "https://cdn.vox-cdn.com/thumbor/2lzWVUHP9ZCb0IncJRlZVEkItgc=/211x0:2620x1955/1200x800/filters:focal(1232x744:1700x1212)/cdn.vox-cdn.com/uploads/chorus_image/image/56499423/usa_today_10246990.0.jpg"
   },
@@ -59,7 +59,7 @@ const nflTeams = [
     "name": "Cleveland Browns",
     "state": "Ohio",
     "city": "Cleveland",
-    "helmet_image": "http://content.sportslogos.net/logos/7/155/thumbs/15578552015.gif",
+    "team_icon": "https://img.ksl.com/slc/logos/nfl/browns.png",
     "division": "AFC North",
     "team_img": "https://cdn.vox-cdn.com/thumbor/YeKPQrGq5KrgfPzMkgsPDD1bWis=/0x0:3623x2762/1200x800/filters:focal(904x862:1482x1440)/cdn.vox-cdn.com/uploads/chorus_image/image/61486643/usa_today_11288126.0.jpg"
   },
@@ -67,7 +67,7 @@ const nflTeams = [
     "name": "Dallas Cowboys",
     "state": "Texas",
     "city": "Frisco",
-    "helmet_image": "http://content.sportslogos.net/logos/7/165/thumbs/406.gif",
+    "team_icon": "https://seeklogo.net/wp-content/uploads/2011/05/dallas-cowboys-logo-vector.png",
     "division": "NFC East",
     "team_img": "https://cdn.vox-cdn.com/thumbor/v0QI1GglDXrzN1XjE4doNTCfjW8=/0x0:3597x2558/1200x800/filters:focal(1434x383:2008x957)/cdn.vox-cdn.com/uploads/chorus_image/image/61464705/usa_today_11265196.0.jpg"
   },
@@ -75,7 +75,7 @@ const nflTeams = [
     "name": "Denver Broncos",
     "state": "Colorado",
     "city": "Denver",
-    "helmet_image": "http://content.sportslogos.net/logos/7/161/thumbs/9ebzja2zfeigaziee8y605aqp.gif",
+    "team_icon": "https://seeklogo.net/wp-content/uploads/2012/10/denver-broncos-logo-vector.png",
     "division": "AFC West",
     "team_img": "https://i.sportsbookreview.com/59dcf4bbfe64d406800a32c6/original-Denver-Broncos.jpg"
   },
@@ -83,7 +83,7 @@ const nflTeams = [
     "name": "Detroit Lions",
     "state": "Michigan",
     "city": "Detroit",
-    "helmet_image": "http://content.sportslogos.net/logos/7/170/thumbs/17013982017.gif",
+    "team_icon": "https://seeklogo.net/wp-content/uploads/2012/09/detroit-lions-logo-vector-01.png",
     "division": "NFC North",
     "team_img": "https://lionslowdown.files.wordpress.com/2018/12/5-reasons-lost-1202.jpg?w=1200"
   },
@@ -91,7 +91,7 @@ const nflTeams = [
     "name": "Green Bay Packers",
     "state": "Wisconsin",
     "city": "Green Bay",
-    "helmet_image": "http://content.sportslogos.net/logos/7/171/thumbs/dcy03myfhffbki5d7il3.gif",
+    "team_icon": "https://seeklogo.net/wp-content/uploads/2012/12/green-bay-packers-logo-vector.png",
     "division": "NFC North",
     "team_img": "https://cdn.vox-cdn.com/thumbor/5s1uFNiRLN26GQ1ICqnrTzuvfOQ=/0x0:4750x3044/1200x800/filters:focal(2247x518:3007x1278)/cdn.vox-cdn.com/uploads/chorus_image/image/61136225/usa_today_11092166.0.jpg"
   },
@@ -99,7 +99,7 @@ const nflTeams = [
     "name": "Houston Texans",
     "state": "Texas",
     "city": "Houston",
-    "helmet_image": "http://content.sportslogos.net/logos/7/157/thumbs/570.gif",
+    "team_icon": "https://seeklogo.net/wp-content/uploads/2012/11/houston-texans-logo-vector.png",
     "division": "AFC South",
     "team_img": "https://cdn.vox-cdn.com/thumbor/wlFl83FmeTTNLwcbT_jMYFiSTOo=/0x0:3829x2679/1200x800/filters:focal(1629x213:2241x825)/cdn.vox-cdn.com/uploads/chorus_image/image/56937273/856340452.0.jpg"
   },
@@ -107,7 +107,7 @@ const nflTeams = [
     "name": "Indianapolis Colts",
     "state": "Indiana",
     "city": "Indianapolis",
-    "helmet_image": "http://content.sportslogos.net/logos/7/158/thumbs/593.gif",
+    "team_icon": "http://assets.stickpng.com/thumbs/580b585b2edbce24c47b2b2c.png",
     "division": "AFC South",
     "team_img": "https://cdn.vox-cdn.com/thumbor/J1lYtPIyOWInq4J60DqoXwtPxjU=/0x0:5184x3456/1200x800/filters:focal(3285x656:4113x1484)/cdn.vox-cdn.com/uploads/chorus_image/image/61903043/usa_today_11491843.0.jpg"
   },
@@ -115,7 +115,7 @@ const nflTeams = [
     "name": "Jacksonville Jaguars",
     "state": "Florida",
     "city": "Jacksonville",
-    "helmet_image": "http://content.sportslogos.net/logos/7/159/thumbs/15988562013.gif",
+    "team_icon": "http://assets.stickpng.com/thumbs/580b585b2edbce24c47b2b2f.png",
     "division": "AFC South",
     "team_img": "https://cdn.vox-cdn.com/thumbor/0_pyTPst04YYzU_rjQvJ0TBDWzA=/0x0:2991x2005/1200x800/filters:focal(1193x652:1671x1130)/cdn.vox-cdn.com/uploads/chorus_image/image/57050131/usa_today_10272195.0.jpg"
   },
@@ -123,7 +123,7 @@ const nflTeams = [
     "name": "Kansas City Chiefs",
     "state": "Kansas",
     "city": "Kansas City",
-    "helmet_image": "http://content.sportslogos.net/logos/7/162/thumbs/857.gif",
+    "team_icon": "https://bloximages.newyork1.vip.townnews.com/derbyinformer.com/content/tncms/assets/v3/editorial/c/45/c45aa900-4859-11e4-bbe5-001a4bcf6878/542a30d3b4627.image.png?resize=400%2C400",
     "division": "AFC West",
     "team_img": "https://cdn.vox-cdn.com/thumbor/HhBnv5wwV5t48gEXub-lf0Wz4gk=/0x0:2380x1718/1200x800/filters:focal(1194x512:1574x892)/cdn.vox-cdn.com/uploads/chorus_image/image/62343671/usa_today_11647974.0.jpg"
   },
@@ -131,7 +131,7 @@ const nflTeams = [
     "name": "Miami Dolphins",
     "state": "Florida",
     "city": "Miami",
-    "helmet_image": "http://content.sportslogos.net/logos/7/6446/thumbs/644624152017.gif",
+    "team_icon": "https://seeklogo.net/wp-content/uploads/2015/08/miami-dolphins-vector-logo.png",
     "division": "AFC East",
     "team_img": "https://cdn.vox-cdn.com/thumbor/Ip7Un-1xDPw3ff58FCIfLSTsIZc=/0x0:3524x2378/1200x800/filters:focal(1288x728:1850x1290)/cdn.vox-cdn.com/uploads/chorus_image/image/61512871/1038614112.jpg.0.jpg"
   },
@@ -139,7 +139,7 @@ const nflTeams = [
     "name": "Minnesota Vikings",
     "state": "Minnesota",
     "city": "Minneapolis",
-    "helmet_image": "http://content.sportslogos.net/logos/7/172/thumbs/17227042013.gif",
+    "team_icon": "https://seeklogo.net/wp-content/uploads/2012/10/minnesota-vikings-logo-vector.png",
     "division": "NFC North",
     "team_img": "https://i1.wp.com/fullpresscoverage.com/wp-content/uploads/2018/10/USATSI_11547401-e1541004272507.jpg?fit=1200%2C800&ssl=1"
   },
@@ -147,7 +147,7 @@ const nflTeams = [
     "name": "New England Patriots",
     "state": "Massachusetts",
     "city": "Foxborough",
-    "helmet_image": "http://content.sportslogos.net/logos/7/151/thumbs/y71myf8mlwlk8lbgagh3fd5e0.gif",
+    "team_icon": "https://seeklogo.net/wp-content/uploads/2014/10/new-england-patriots-logo-preview.png",
     "division": "AFC East",
     "team_img": "https://i2.wp.com/arrowheadsabroad.com/wp-content/uploads/2018/05/Pats-1.jpg?fit=1200%2C800&ssl=1"
   },
@@ -155,7 +155,7 @@ const nflTeams = [
     "name": "New Orleans Saints",
     "state": "Louisiana",
     "city": "New Orleans",
-    "helmet_image": "http://content.sportslogos.net/logos/7/175/thumbs/907.gif",
+    "team_icon": "https://seeklogo.net/wp-content/uploads/2012/12/new-orleans-saints-logo-vector.png",
     "division": "NFC South",
     "team_img": "https://bloximages.newyork1.vip.townnews.com/theadvocate.com/content/tncms/assets/v3/editorial/4/42/442887f0-dfb8-5da5-8765-89d03791084f/5c0d538ea5bae.image.jpg?resize=1200%2C800"
   },
@@ -163,7 +163,7 @@ const nflTeams = [
     "name": "New York Giants",
     "state": "New York",
     "city": "East Rutherford",
-    "helmet_image": "http://content.sportslogos.net/logos/7/166/thumbs/919.gif",
+    "team_icon": "https://seeklogo.net/wp-content/uploads/2011/05/new-york-giants-logo-vector.png",
     "division": "NFC East",
     "team_img": "https://s3media.247sports.com/Uploads/Assets/158/953/4953158.jpg"
   },
@@ -171,7 +171,7 @@ const nflTeams = [
     "name": "New York Jets",
     "state": "New York",
     "city": "East Rutherford",
-    "helmet_image": "http://content.sportslogos.net/logos/7/152/thumbs/v7tehkwthrwefgounvi7znf5k.gif",
+    "team_icon": "https://seeklogo.net/wp-content/uploads/2011/05/new-york-jets-logo-vector-01.png",
     "division": "AFC East",
     "team_img": "https://cdn.vox-cdn.com/thumbor/YFMeIlXpZ_HPW5jLLBZHaP1Un5Q=/0x0:3489x2326/1200x800/filters:focal(1590x941:2148x1499)/cdn.vox-cdn.com/uploads/chorus_image/image/62320017/usa_today_11647518.0.jpg"
   },
@@ -179,7 +179,7 @@ const nflTeams = [
     "name": "Oakland Raiders",
     "state": "California",
     "city": "Oakland",
-    "helmet_image": "http://content.sportslogos.net/logos/7/163/thumbs/g9mgk6x3ge26t44cccm9oq1vl.gif",
+    "team_icon": "https://seeklogo.net/wp-content/uploads/2012/10/oakland-raiders-logo-vector.png",
     "division": "AFC West",
     "team_img": "https://cdn.vox-cdn.com/thumbor/AaD8tuGQfPtwoSYLYKcCLR8IcbE=/0x0:4602x3068/1200x800/filters:focal(2674x13:3410x749)/cdn.vox-cdn.com/uploads/chorus_image/image/61667629/usa_today_11355933.0.jpg"
   },
@@ -187,7 +187,7 @@ const nflTeams = [
     "name": "Philadelphia Eagles",
     "state": "Pennsylvania",
     "city": "Philadelphia",
-    "helmet_image": "http://content.sportslogos.net/logos/7/167/thumbs/960.gif",
+    "team_icon": "https://seeklogo.net/wp-content/uploads/2014/10/philadelphia-eagles-logo.png",
     "division": "NFC East",
     "team_img": "https://goldmedalimpressions.com/wp-content/uploads/2018/01/1-Philadelphia-Eagles-quarterback-NICK-FOLES-throws-touchdown-pass-to-Alshon-Jeffery.jpg"
   },
@@ -195,7 +195,7 @@ const nflTeams = [
     "name": "Pittsburgh Steelers",
     "state": "Pennsylvania",
     "city": "Pittsburgh",
-    "helmet_image": "http://content.sportslogos.net/logos/7/156/thumbs/970.gif",
+    "team_icon": "https://seeklogo.net/wp-content/uploads/2011/05/pittsburgh-steelers-logo-vector-01.png",
     "division": "AFC North",
     "team_img": "https://cdn.vox-cdn.com/thumbor/SrFs0qGLSRcUGY8p_XzYhbzevjg=/0x0:3584x2264/1200x800/filters:focal(1506x846:2078x1418)/cdn.vox-cdn.com/uploads/chorus_image/image/57131945/usa_today_10342627.0.jpg"
   },
@@ -203,15 +203,15 @@ const nflTeams = [
     "name": "Los Angeles Rams",
     "state": "California",
     "city": "Los Angeles",
-    "helmet_image": "http://content.sportslogos.net/logos/7/5941/thumbs/594179532017.gif",
+    "team_icon": "https://seeklogo.net/wp-content/uploads/2015/08/st-louis-rams-vector-logo.png",
     "division": "NFC West",
     "team_img": "https://cdn.vox-cdn.com/thumbor/lXBG0W-yw0baA-edaTFvZGV6Oq0=/0x0:2949x2199/1200x800/filters:focal(1553x440:2023x910)/cdn.vox-cdn.com/uploads/chorus_image/image/58250889/894379402.jpg.0.jpg"
   },
   {
     "name": "Los Angeles Chargers",
     "state": "California",
+    "team_icon": "https://seeklogo.net/wp-content/uploads/2012/10/san-diego-chargers-logo-vector.png",
     "city": "Los Angeles",
-    "helmet_image": "http://content.sportslogos.net/logos/7/6446/thumbs/644624152017.gif",
     "division": "AFC West",
     "team_img": "https://cdn.vox-cdn.com/thumbor/wh2AKZa3minPgXTXx0JhLecXhV8=/0x0:3435x2290/1200x800/filters:focal(1576x661:2124x1209)/cdn.vox-cdn.com/uploads/chorus_image/image/61134183/usa_today_10458932.0.jpg"
   },
@@ -219,7 +219,7 @@ const nflTeams = [
     "name": "San Francisco 49ers",
     "state": "California",
     "city": "San Francisco",
-    "helmet_image": "http://content.sportslogos.net/logos/7/179/thumbs/17994552009.gif",
+    "team_icon": "https://seeklogo.net/wp-content/uploads/2011/06/san-francisco-49ers-logo-vector.png",
     "division": "NFC West",
     "team_img": "https://cdn.vox-cdn.com/thumbor/VWUKNAq8EMgqCAZoYt3ZcJIm3NA=/0x0:2701x1800/1200x800/filters:focal(1135x684:1567x1116)/cdn.vox-cdn.com/uploads/chorus_image/image/62340472/1056151072.jpg.0.jpg"
   },
@@ -227,7 +227,7 @@ const nflTeams = [
     "name": "Seattle Seahawks",
     "state": "Washington",
     "city": "Seattle",
-    "helmet_image": "http://content.sportslogos.net/logos/7/180/thumbs/pfiobtreaq7j0pzvadktsc6jv.gif",
+    "team_icon": "https://seeklogo.net/wp-content/uploads/2012/10/seattle-seahawks-logo-vector.png",
     "division": "NFC West",
     "team_img": "https://pbs.twimg.com/media/Db4_f9mVAAAK7TV.jpg"
   },
@@ -235,7 +235,7 @@ const nflTeams = [
     "name": "Tampa Bay Buccaneers",
     "state": "Florida",
     "city": "Tampa",
-    "helmet_image": "http://content.sportslogos.net/logos/7/176/thumbs/17636702014.gif",
+    "team_icon": "https://seeklogo.net/wp-content/uploads/2012/12/tampa-bay-buccaneers-logo-vector.png",
     "division": "NFC South",
     "team_img": "https://cdn.vox-cdn.com/thumbor/3U1ejfwQSuQ4nzyNLvD5XoS449w=/0x0:2529x1683/1200x800/filters:focal(291x1:695x405)/cdn.vox-cdn.com/uploads/chorus_image/image/60368791/usa_today_10486761.0.jpg"
   },
@@ -243,15 +243,15 @@ const nflTeams = [
     "name": "Tennessee Titans",
     "state": "Tennessee",
     "city": "Nashville",
-    "helmet_image": "http://content.sportslogos.net/logos/7/160/thumbs/1053.gif",
+    "team_icon": "http://assets.stickpng.com/thumbs/580b585b2edbce24c47b2b61.png",
     "division": "AFC South",
     "team_img": "https://cdn.vox-cdn.com/thumbor/yUZaopk9iMXI1WggQTGvtySGS-k=/0x0:4567x3455/1200x800/filters:focal(2553x1284:3283x2014)/cdn.vox-cdn.com/uploads/chorus_image/image/62338246/1060255600.jpg.0.jpg"
   },
   {
     "name": "Washington Redskins",
     "state": "Maryland",
+    "team_icon": "https://seeklogo.net/wp-content/uploads/2011/05/washington-redskins-logo-vector.png",
     "city": "Landover",
-    "helmet_image": "http://content.sportslogos.net/logos/7/168/thumbs/im5xz2q9bjbg44xep08bf5czq.gif",
     "division": "NFC East",
     "team_img": "https://cdn.vox-cdn.com/thumbor/j2fypx-LxDTM3yCAWRWJolpWiX8=/0x0:4245x2830/1200x800/filters:focal(1603x293:2281x971)/cdn.vox-cdn.com/uploads/chorus_image/image/58177585/624781162.jpg.0.jpg"
   }
