@@ -18,7 +18,6 @@ export default class Container extends Component {
   }
 
   grabIndex = (clickedTeam) => {
-    console.log(clickedTeam)
     this.setState({
       clickedIndex: clickedTeam
     })
