@@ -250,8 +250,8 @@ const nflTeams = [
   {
     "name": "Washington Redskins",
     "state": "Maryland",
-    "city": "Ashburn",
-   "helmet_image": "http://content.sportslogos.net/logos/7/168/thumbs/im5xz2q9bjbg44xep08bf5czq.gif",
+    "city": "Landover",
+    "helmet_image": "http://content.sportslogos.net/logos/7/168/thumbs/im5xz2q9bjbg44xep08bf5czq.gif",
     "division": "NFC East",
     "team_img": "https://cdn.vox-cdn.com/thumbor/j2fypx-LxDTM3yCAWRWJolpWiX8=/0x0:4245x2830/1200x800/filters:focal(1603x293:2281x971)/cdn.vox-cdn.com/uploads/chorus_image/image/58177585/624781162.jpg.0.jpg"
   }
