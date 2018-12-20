@@ -14,7 +14,7 @@
 .app-title-area {
   height: 250px;
   opacity: 0.7;
-  background: url('https://cdn-s3.si.com/styles/marquee_large_2x/s3/images/philly-eagles-broncos-fans.jpg?itok=1pEiQnWa');
+  background: url('./images/philly-eagles-broncos-fans.jpg');
 }
 
 .app-title {

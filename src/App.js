@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { nflTeams, cities } from './dataset/nfl-cities'
 import Container from './Container.js'
+import loadingGif from './images/football.gif'
 // import './reset.css';
 import './App.css';
 
@@ -31,7 +32,7 @@ class App extends Component {
   render() {
     if(this.state.isLoading) {
       return(
-        <div className="loading-screen"><img className="loading-image" src='https://media.giphy.com/media/lXiRCXQ2OWXO3xPr2/giphy.gif' /></div>
+        <div className="loading-screen"> <img className="loading-image" src={loadingGif} /> </div>
       )
     } else {
       return (
