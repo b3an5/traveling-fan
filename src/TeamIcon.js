@@ -2,19 +2,19 @@ import React from 'react';
 import './reset.css';
 import './TeamIcon.scss';
 
-export default function teamIcon() {
+export default function teamIcon(props) {
 
-    function toggleIconFunctions() {
-      this.props.toggleCardView();
-      this.props.grabIndex(this.props.index)
-    }
-
-    return(
-      <article onClick={toggleIconFunctions}>
-        <img src={this.props.nflTeam.helmet_image} /> 
-        <h2>{this.props.nflTeam.name}</h2>
-      </article>
-    )
+  function toggleIconFunctions() {
+    props.toggleCardView();
+    props.getIndex(props.index)
   }
+
+  return(
+    <article onClick={toggleIconFunctions}>
+      <img src={props.nflTeam.team_icon} alt="image of team logo"/> 
+      <h2>{props.nflTeam.name}</h2>
+    </article>
+  )
+  
 }
 

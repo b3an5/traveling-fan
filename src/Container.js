@@ -8,7 +8,7 @@ export default class Container extends Component {
     super();
     this.state = {
       enlargeCard: false,
-      clickedIndex: undefined
+      clickedIndex: null
     }
   }
 
@@ -18,7 +18,7 @@ export default class Container extends Component {
     })
   }
 
-  grabIndex = (clickedTeam) => {
+  getIndex = (clickedTeam) => {
     this.setState({
       clickedIndex: clickedTeam
     })
@@ -33,7 +33,7 @@ export default class Container extends Component {
               return <TeamIcon toggleCardView={this.toggleCardView} 
                                nflTeam={nflTeam} 
                                index={index}
-                               grabIndex={this.grabIndex} />
+                               getIndex={this.getIndex} />
             })
           }
         </main>
