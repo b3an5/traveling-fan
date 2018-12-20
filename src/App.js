@@ -3,6 +3,7 @@ import { nflTeams, cities } from './dataset/nfl-cities'
 import Container from './Container.js'
 import './reset.css';
 import './App.css';
+import loadingGif from './images/football.gif'
 
 class App extends Component {
   constructor(){
@@ -24,10 +25,12 @@ class App extends Component {
 
   componentDidMount() {
     this.getData('nflTeams').then((data) => {
-      this.setState({
-        nflTeams: data.nflTeams,
-        isLoading: false
-      })
+      setTimeout(() => {
+        this.setState({
+          nflTeams: data.nflTeams,
+          isLoading: false
+        })
+      }, 1000);
     }).catch(err => console.log(err))
 
     this.getData('cities').then((city) => {
@@ -40,7 +43,7 @@ class App extends Component {
   render() {
     if (this.state.isLoading) {
       return(
-        <div>...Loading, yo.  Wait a bit...</div>
+        <div className="loading-screen"> <img className="loading-image" src={loadingGif} /> </div>
         )
     } else {
       return (
@@ -54,8 +57,6 @@ class App extends Component {
           </div>
         </div>
       );
-
-      
     }
   }
 }

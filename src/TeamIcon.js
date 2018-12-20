@@ -15,6 +15,5 @@ export default function teamIcon(props) {
       <h2>{props.nflTeam.name}</h2>
     </article>
   )
-  
 }
 
