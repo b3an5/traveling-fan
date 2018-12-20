@@ -30,10 +30,12 @@ export default class Card extends Component {
   }
 
   render() {
-    const xIcon = 'X';
+    const xIcon = 'Click here to return';
     const selectedTeam = this.props.nflTeams[this.props.clickedIndex];
     const selectedCity = this.state.matchedCity;
+
     if (this.state.teamInfo) {
+
       return (
         <div>
           <h1 onClick={this.props.toggleCardView}>{xIcon}</h1>
@@ -45,8 +47,8 @@ export default class Card extends Component {
         </div>
       )
     } else {
-      const nums = [0, 1, 2, 3];
 
+      const nums = [0, 1, 2, 3];
 
       return (
         <div>
@@ -54,11 +56,10 @@ export default class Card extends Component {
           <img src={selectedCity.city_image} alt="city" />
           <h2>{selectedCity.name}, {selectedCity.state}</h2>
           <h2>Population: {selectedCity.population}</h2>
-      {nums.map((number) => {
-        let link = `https://google.com/search?q=${selectedCity.attractions[`${number}`].trim().split(' ').join('%20')}`
-        return  <h2><a href={link} target="_blank" rel="noopener noreferrer" >{selectedCity.attractions[`${number}`]}</a></h2>
-      })}
-        
+          {nums.map((number) => {
+            let link = `https://google.com/search?q=${selectedCity.attractions[`${number}`].trim().split(' ').join('%20')}`;
+            return  <h2><a href={link} target="_blank" rel="noopener noreferrer" >{selectedCity.attractions[`${number}`]}</a></h2>
+          })}
           <button onClick={this.toggleCityInfo}>Show Team Info</button>
         </div>
       )
