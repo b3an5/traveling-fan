@@ -42,10 +42,18 @@ class App extends Component {
     }).catch(errrr => console.log(errrr))
   }
 
+  findSearchedTeam = (input) => {
+    let matched = nflTeams.filter(team => {
+      return team.name.toLowerCase().includes(input.toLowerCase())
+    })
+    this.setState({nflTeams: matched})
+ }
+  
+
   render() {
     if (this.state.isLoading) {
       return(
-        <div className="loading-screen"> <img className="loading-image" src={loadingGif} /> </div>
+        <div className="loading-screen"> <img className="loading-image" src={loadingGif} alt="loading screen"/> </div>
         )
     } else {
       return (
@@ -58,7 +66,7 @@ class App extends Component {
             </h1>
           </div>
           <div>
-            <Nav />
+            <Nav findSearchedTeam={this.findSearchedTeam}/>
           </div>
           <div className="flex">
             <Container nflTeams={this.state.nflTeams} cities={this.state.cities} />
