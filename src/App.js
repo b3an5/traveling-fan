@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
 import { nflTeams, cities } from './dataset/nfl-cities'
 import Container from './Container.js'
+import Nav from './Nav.js'
 import './reset.css';
 import './App.css';
-import loadingGif from './images/football.gif'
+import loadingGif from './images/football.gif';
+import nflLogo from './images/nfl-logo.png';
 
 class App extends Component {
   constructor(){
@@ -49,9 +51,15 @@ class App extends Component {
       return (
         <div className="app">
           <div className='app-title-area'>
-            <h1 className='app-title'>The Traveling Fan</h1>
+            <h1 className='app-title'>
+              <img src={nflLogo} alt="" />
+              The Traveling Fan
+              <img src={nflLogo} alt="" />
+            </h1>
           </div>
-          {/* <Nav /> */}
+          <div>
+            <Nav />
+          </div>
           <div className="flex">
             <Container nflTeams={this.state.nflTeams} cities={this.state.cities} />
           </div>
