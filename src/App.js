@@ -1,39 +1,50 @@
 import React, { Component } from 'react';
 import { nflTeams, cities } from './dataset/nfl-cities'
 import Container from './Container.js'
-import loadingGif from './images/football.gif'
-// import './reset.css';
+import './reset.css';
 import './App.css';
+import loadingGif from './images/football.gif'
 
 class App extends Component {
-  constructor() {
+  constructor(){
     super();
+
     this.state = {
       nflTeams: null,
+      cities: null,
       isLoading: true
-    }
+    } 
+  }
+
+  getData(datatype) {
+    const root = 'https://whateverly-datasets.herokuapp.com/api/v1/';
+    const promise = fetch(`${root}${datatype}`)
+                    .then(data => data.json())
+    return promise;
   }
 
   componentDidMount() {
-    fetch('https://whateverly-datasets.herokuapp.com/api/v1/nflTeams')
-      .then(nflTeams => nflTeams.json())
-      .then(data => {
-        setTimeout(() => {
-          this.setState({
-            nflTeams: data.nflTeams,
-            isLoading: false
-          })
-        }, 1000);
-      }
-      )
-      .catch(error => console.log(error))
+    this.getData('nflTeams').then((data) => {
+      setTimeout(() => {
+        this.setState({
+          nflTeams: data.nflTeams,
+          isLoading: false
+        })
+      }, 1000);
+    }).catch(err => console.log(err))
+
+    this.getData('cities').then((city) => {
+      this.setState({
+        cities: city.cities
+      })
+    }).catch(errrr => console.log(errrr))
   }
 
   render() {
-    if(this.state.isLoading) {
+    if (this.state.isLoading) {
       return(
         <div className="loading-screen"> <img className="loading-image" src={loadingGif} /> </div>
-      )
+        )
     } else {
       return (
         <div className="app">
@@ -42,8 +53,7 @@ class App extends Component {
           </div>
           {/* <Nav /> */}
           <div className="flex">
-          {console.log(this.state.nflTeams)}
-            <Container nflTeams={this.state.nflTeams} cities={cities} />
+            <Container nflTeams={this.state.nflTeams} cities={this.state.cities} />
           </div>
         </div>
       );
