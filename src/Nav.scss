@@ -1,0 +1,29 @@
+nav {
+  background: url('./images/nav-bg.png');
+  background-size: cover;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+form input, form label {
+  margin: 0 80px;
+}
+
+form label {
+  font-size: 2rem;
+
+}
+
+input {
+  height: 50px;
+  width: 300px;
+  font-size: 1.3rem;
+}
+
+select {
+  font-size: 1.3rem;
+  height: 50px;
+  width: 200px;
+}
