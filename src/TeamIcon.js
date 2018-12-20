@@ -11,7 +11,8 @@ export default function teamIcon(props) {
 
   return(
     <article onClick={toggleIconFunctions}>
-      <img src={props.nflTeam.team_icon} alt="image of team logo"/> 
+      {console.error('team icon line 14 fix for dataset')}
+      <img src={props.nflTeam.helmet_image} alt="team logo"/> 
       <h2>{props.nflTeam.name}</h2>
     </article>
   )

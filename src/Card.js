@@ -37,7 +37,7 @@ export default class Card extends Component {
       return (
         <div>
           <h1 onClick={this.props.toggleCardView}>{xIcon}</h1>
-          <img src={selectedTeam.team_img} alt='image of NFL team'/>
+          <img src={selectedTeam.team_img} alt="NFL team"/>
           <h2>{selectedTeam.name}</h2>
           <h2>{selectedTeam.city}, {selectedTeam.state}</h2>
           <h2>{selectedTeam.division}</h2>
@@ -51,7 +51,7 @@ export default class Card extends Component {
       return (
         <div>
           <h1 onClick={this.props.toggleCardView}>{xIcon}</h1>
-          <img src={selectedCity.city_image} alt="image of city" />
+          <img src={selectedCity.city_image} alt="city" />
           <h2>{selectedCity.name}, {selectedCity.state}</h2>
           <h2>Population: {selectedCity.population}</h2>
       {nums.map((number) => {
