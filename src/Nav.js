@@ -5,16 +5,33 @@ export default class Nav extends Component {
   constructor() {
     super();
     this.state = {
-      i: null
+      team: null
     }
+  }
+
+  submitSearch = (e) => {
+    e.preventDefault();
+    this.props.findSearchedTeam(this.state.team);
+  }
+  
+  setInputValue = (e) => { 
+    this.setState({
+      team: e.target.value
+    })
+    
   }
 
   render() {
     return (
       <nav className="nav-area">
         <form action="#">
-          <input type="text" placeholder="Enter team name or city" />
-          <label for="division-select">Select an NFL Division:</label>
+          <input type="text"
+                 placeholder="Enter team name"
+                 onChange={this.setInputValue}/>
+          <button className="search-btn"
+                  type="submit" 
+                  onClick={this.submitSearch} >Submit</button>
+          <label htmlFor="division-select">Select an NFL Division:</label>
 
           <select id="division-select">
             <option value="afc">--AFC Division--</option>
