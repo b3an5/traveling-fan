@@ -1,6 +1,6 @@
 import React from 'react';
 import TeamIcon from './TeamIcon.js';
-import { shallow, mount } from 'enzyme';
+import { shallow } from 'enzyme';
 
 const mockClick = jest.fn();
 const mockGetIndex = jest.fn();
@@ -29,7 +29,6 @@ describe('TeamIcon', () => {
   });
 
   it('should match the snapshot with all data passed correctly to the Icon', () => {
-    console.log(wrapper.instance())
     expect(wrapper).toMatchSnapshot();
   })
 
