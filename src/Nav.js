@@ -5,8 +5,18 @@ export default class Nav extends Component {
   constructor() {
     super();
     this.state = {
-      team: null
+      team: null,
+      selectedValue: 'afc'
     }
+  }
+
+  handleChange = (e) => { 
+    this.setState({selectedValue: e.target.value})
+  }
+
+  submitSelection = (e) => {
+    e.preventDefault();
+    this.props.findSelectedDivision(this.state.selectedValue);
   }
 
   submitSearch = (e) => {
@@ -18,7 +28,6 @@ export default class Nav extends Component {
     this.setState({
       team: e.target.value
     })
-    
   }
 
   render() {
@@ -26,14 +35,17 @@ export default class Nav extends Component {
       <nav className="nav-area">
         <form action="#">
           <input type="text"
+                 className="search-input"
                  placeholder="Enter team name"
                  onChange={this.setInputValue}/>
           <button className="search-btn"
                   type="submit" 
-                  onClick={this.submitSearch} >Submit</button>
+                  onClick={this.submitSearch} >Submit Search</button>
           <label htmlFor="division-select">Select an NFL Division:</label>
 
-          <select id="division-select">
+          <select id="division-select"
+                  value={this.state.selectedValue}
+                  onChange={this.handleChange} >
             <option value="afc">--AFC Division--</option>
             <option value="afc-north">AFC North</option>
             <option value="afc-east">AFC East</option>
@@ -45,7 +57,9 @@ export default class Nav extends Component {
             <option value="nfc-south">NFC South</option>
             <option value="nfc-west">NFC West</option>
           </select>
-
+          <button className="select-btn"
+            type="submit"
+            onClick={this.submitSelection} >Submit Selection</button>
         </form>
       </nav>
     )
