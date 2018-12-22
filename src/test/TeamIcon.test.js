@@ -1,5 +1,5 @@
 import React from 'react';
-import TeamIcon from './TeamIcon.js';
+import TeamIcon from '../TeamIcon.js';
 import { shallow } from 'enzyme';
 
 const mockTeamColor = 'arizona-cardinals'

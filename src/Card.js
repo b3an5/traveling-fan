@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './Card.scss';
+import './css/Card.scss';
 import xIcon from './images/xIcon.svg'
 
 export default class Card extends Component {

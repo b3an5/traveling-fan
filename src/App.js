@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import Container from './Container.js'
 import Nav from './Nav.js'
-import './reset.css';
-import './App.css';
+import './css/reset.css';
+import './css/App.css';
 import loadingGif from './images/football.gif';
 import nflLogo from './images/nfl-logo.png';
 

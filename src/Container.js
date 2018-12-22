@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import './reset.css';
+import './css/reset.css';
 import TeamIcon from './TeamIcon.js';
 import Card from './Card.js';
-import './Container.scss';
+import './css/Container.scss';
 
 export default class Container extends Component {
   constructor() {

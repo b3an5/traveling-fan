@@ -50,6 +50,7 @@ ShallowWrapper {
     "props": Object {
       "children": Array [
         <img
+          alt="icon"
           className="x-icon"
           onClick={[MockFunction]}
           src="xIcon.svg"
@@ -92,6 +93,7 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
+          "alt": "icon",
           "className": "x-icon",
           "onClick": [MockFunction],
           "src": "xIcon.svg",
@@ -181,6 +183,7 @@ ShallowWrapper {
       "props": Object {
         "children": Array [
           <img
+            alt="icon"
             className="x-icon"
             onClick={[MockFunction]}
             src="xIcon.svg"
@@ -223,6 +226,7 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
+            "alt": "icon",
             "className": "x-icon",
             "onClick": [MockFunction],
             "src": "xIcon.svg",

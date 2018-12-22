@@ -1,6 +1,6 @@
 import React from 'react';
-import './reset.css';
-import './TeamIcon.scss';
+import './css/reset.css';
+import './css/TeamIcon.scss';
 
 const TeamIcon = (props) => {
 
