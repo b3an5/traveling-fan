@@ -16,7 +16,7 @@ export default class Container extends Component {
     this.setState({
       enlargeCard: !this.state.enlargeCard
     })
-  }
+    }
 
   getIndex = (clickedTeam) => {
     this.setState({
@@ -46,6 +46,7 @@ export default class Container extends Component {
     } else {
       return (
         <main className="main-display main-display-card">
+          <div className='card-background'></div>
           <Card nflTeams={this.props.nflTeams} 
                 cities={this.props.cities}
                 toggleCardView={this.toggleCardView}
