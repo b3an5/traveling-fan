@@ -24,16 +24,21 @@ export default class Container extends Component {
     })
   }
 
+  toggleIconFunctions = (index) => {
+    this.toggleCardView();
+    this.getIndex(index)
+  }
+
   render() {
     if(this.state.enlargeCard === false) {
       return(
         <main className="main-display">
           {
             this.props.nflTeams.map((nflTeam, index) => {
-              return <TeamIcon toggleCardView={this.toggleCardView} 
+              return <TeamIcon toggleIconFunctions={this.toggleIconFunctions} 
                                nflTeam={nflTeam} 
                                index={index}
-                               getIndex={this.getIndex} />
+                                />
             })
           }
         </main>
