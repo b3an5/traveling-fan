@@ -18,25 +18,30 @@ const usedCities = [{"attractions": ["Wildlife World Zoo", "White Tank Mountain 
 "population": 226721,
 "state": "Arizona"}];
 const mockToggleCardView = jest.fn();
-const mockClickedIndex = jest.fn();
+const mockClickedIndex = 0
 
 describe('Card', () => {
   let wrapper;
 
   beforeEach(() => {
     wrapper = shallow(
-      <div>
-      <img src="teams.team_img" />
+     
+     
       <Card 
         nflTeams={teams}
         cities={usedCities}
         toggleCardView={mockToggleCardView}
         clickedIndex={mockClickedIndex} />
-        </div>
+     
       )
   })
 
   it('should match the snapshot with all data passed correctly to the card', () => {
     expect(wrapper).toMatchSnapshot();
+  })
+
+
+  it('should have all the proper default state', () => {
+    expect(wrapper.state()).toEqual({teamInfo: true, matchedCity: null })
   })
 })
