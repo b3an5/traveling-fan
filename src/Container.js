@@ -32,7 +32,7 @@ export default class Container extends Component {
   render() {
     if(this.state.enlargeCard === false) {
       return(
-        <main className="main-display">
+        <main className="main-display main-display-icon">
           {
             this.props.nflTeams.map((nflTeam, index) => {
               return <TeamIcon toggleIconFunctions={this.toggleIconFunctions} 
@@ -45,7 +45,7 @@ export default class Container extends Component {
       )
     } else {
       return (
-        <main className="main-display">
+        <main className="main-display main-display-card">
           <Card nflTeams={this.props.nflTeams} 
                 cities={this.props.cities}
                 toggleCardView={this.toggleCardView}
