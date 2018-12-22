@@ -4,10 +4,26 @@
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
+}
+
+.main-display-icon {
   height: 100%;
+}
+
+.main-display-card {
+  height: 80vh;
 }
 
 .flex {
   background: url('./images/586928424-nfl-football-field-wallpaper.jpg');
+}
+
+.card-background {
+  background-color:rgba(0,0,0,0.8);
+  z-index: 2;
+  width: 100vw;
+  height: 94vh;
+  position: absolute;
+  top: 175px;
 }
 
