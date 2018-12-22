@@ -2,15 +2,10 @@ import React from 'react';
 import './reset.css';
 import './TeamIcon.scss';
 
-export default function teamIcon(props) {
-
-  function toggleIconFunctions() {
-    props.toggleCardView();
-    props.getIndex(props.index)
-  }
+const TeamIcon = (props) => {
 
   return(
-    <article onClick={toggleIconFunctions}>
+    <article className='icon' onClick={() => props.toggleIconFunctions(props.index)}>
       {console.error('team icon line 14 fix for dataset')}
       <img src={props.nflTeam.helmet_image} alt="team logo"/> 
       <h2>{props.nflTeam.name}</h2>
@@ -18,3 +13,4 @@ export default function teamIcon(props) {
   )
 }
 
+export default TeamIcon;

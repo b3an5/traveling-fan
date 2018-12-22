@@ -48,7 +48,6 @@ class App extends Component {
     })
     this.setState({nflTeams: matched})
  }
-  
 
   render() {
     if (this.state.isLoading) {
