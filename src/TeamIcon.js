@@ -8,11 +8,10 @@ export default function teamIcon(props) {
     props.toggleCardView();
     props.getIndex(props.index)
   }
-
+  var teamColor = props.nflTeam.name.split(' ').join('-').toLowerCase();
   return(
-    <article onClick={toggleIconFunctions}>
-      {console.error('team icon line 14 fix for dataset')}
-      <img src={props.nflTeam.helmet_image} alt="team logo"/> 
+    <article onClick={toggleIconFunctions} className={teamColor}>
+      <img src={props.nflTeam.team_icon} alt="team logo"/> 
       <h2>{props.nflTeam.name}</h2>
     </article>
   )
