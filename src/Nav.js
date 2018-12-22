@@ -46,6 +46,7 @@ export default class Nav extends Component {
           <select id="division-select"
                   value={this.state.selectedValue}
                   onChange={this.handleChange} >
+            <option value="allgi">--Show All--</option>
             <option value="afc">--AFC Division--</option>
             <option value="afc-north">AFC North</option>
             <option value="afc-east">AFC East</option>

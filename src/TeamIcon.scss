@@ -19,11 +19,14 @@ article:hover {
   background-image: radial-gradient(circle, rgba(255, 255, 255, 0.95), rgba(0, 0, 0, 0.95));
 }
 
-img {
-  max-height: 175px;
-  max-width: 175px;
-}
+// .icon-img {
+//   max-height: 175px;
+//   max-width: 175px;
+// }
 
+.icon-img {
+  height: 6rem;
+}
 
 h2 {
   font-size: 2em;

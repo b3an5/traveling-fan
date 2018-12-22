@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './reset.css';
 import TeamIcon from './TeamIcon.js';
 import Card from './Card.js';
 import './Container.scss';
@@ -35,9 +36,12 @@ export default class Container extends Component {
         <main className="main-display main-display-icon">
           {
             this.props.nflTeams.map((nflTeam, index) => {
-              return <TeamIcon toggleIconFunctions={this.toggleIconFunctions} 
-                               nflTeam={nflTeam} 
-                               index={index}
+              return <TeamIcon 
+                        teamColor={nflTeam.name.split(' ').join('-').toLowerCase()}
+                        toggleIconFunctions={this.toggleIconFunctions} 
+                        nflTeam={nflTeam} 
+                        index={index}
+                        key={nflTeam.name}
                                 />
             })
           }
@@ -50,7 +54,8 @@ export default class Container extends Component {
           <Card nflTeams={this.props.nflTeams} 
                 cities={this.props.cities}
                 toggleCardView={this.toggleCardView}
-                clickedIndex={this.state.clickedIndex} />
+                clickedIndex={this.state.clickedIndex}
+                key={this.props.nflTeams.name} />
         </main>
       )
     }

@@ -17,6 +17,7 @@ ShallowWrapper {
         },
       ]
     }
+    teamColor="arizona-cardinals"
     toggleIconFunctions={[MockFunction]}
   />,
   Symbol(enzyme.__renderer__): Object {
@@ -33,24 +34,24 @@ ShallowWrapper {
     "nodeType": "host",
     "props": Object {
       "children": Array [
-        undefined,
         <img
           alt="team logo"
+          className="icon-img"
         />,
         <h2 />,
       ],
-      "className": "icon",
+      "className": "arizona-cardinals",
       "onClick": [Function],
     },
     "ref": null,
     "rendered": Array [
-      undefined,
       Object {
         "instance": null,
         "key": undefined,
         "nodeType": "host",
         "props": Object {
           "alt": "team logo",
+          "className": "icon-img",
           "src": undefined,
         },
         "ref": null,
@@ -78,24 +79,24 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": Array [
-          undefined,
           <img
             alt="team logo"
+            className="icon-img"
           />,
           <h2 />,
         ],
-        "className": "icon",
+        "className": "arizona-cardinals",
         "onClick": [Function],
       },
       "ref": null,
       "rendered": Array [
-        undefined,
         Object {
           "instance": null,
           "key": undefined,
           "nodeType": "host",
           "props": Object {
             "alt": "team logo",
+            "className": "icon-img",
             "src": undefined,
           },
           "ref": null,

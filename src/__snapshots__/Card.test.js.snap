@@ -49,32 +49,41 @@ ShallowWrapper {
     "nodeType": "host",
     "props": Object {
       "children": Array [
-        <h1
+        <img
+          className="x-icon"
           onClick={[MockFunction]}
-        >
-          Click here to return
-        </h1>,
+          src="xIcon.svg"
+        />,
         <img
           alt="NFL team"
+          className="card-img"
           src="https://cdn.vox-cdn.com/thumbor/M5Gx-DCa9eRAqw_aqIyuG6I2wDo=/0x0:4777x3021/1200x800/filters:focal(2094x550:2858x1314)/cdn.vox-cdn.com/uploads/chorus_image/image/62274919/usa_today_11648254.0.jpg"
         />,
-        <h2>
+        <h2
+          className="team-info"
+        >
           Arizona Cardinals
         </h2>,
-        <h2>
+        <h2
+          className="team-info"
+        >
           Glendale
           , 
           Arizona
         </h2>,
-        <h2>
+        <h2
+          className="team-info"
+        >
           NFC West
         </h2>,
         <button
+          className="card-btn"
           onClick={[Function]}
         >
           Show City Info
         </button>,
       ],
+      "className": "card",
     },
     "ref": null,
     "rendered": Array [
@@ -83,12 +92,13 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
-          "children": "Click here to return",
+          "className": "x-icon",
           "onClick": [MockFunction],
+          "src": "xIcon.svg",
         },
         "ref": null,
-        "rendered": "Click here to return",
-        "type": "h1",
+        "rendered": null,
+        "type": "img",
       },
       Object {
         "instance": null,
@@ -96,6 +106,7 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "alt": "NFL team",
+          "className": "card-img",
           "src": "https://cdn.vox-cdn.com/thumbor/M5Gx-DCa9eRAqw_aqIyuG6I2wDo=/0x0:4777x3021/1200x800/filters:focal(2094x550:2858x1314)/cdn.vox-cdn.com/uploads/chorus_image/image/62274919/usa_today_11648254.0.jpg",
         },
         "ref": null,
@@ -108,6 +119,7 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "children": "Arizona Cardinals",
+          "className": "team-info",
         },
         "ref": null,
         "rendered": "Arizona Cardinals",
@@ -123,6 +135,7 @@ ShallowWrapper {
             ", ",
             "Arizona",
           ],
+          "className": "team-info",
         },
         "ref": null,
         "rendered": Array [
@@ -138,6 +151,7 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "children": "NFC West",
+          "className": "team-info",
         },
         "ref": null,
         "rendered": "NFC West",
@@ -149,6 +163,7 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "children": "Show City Info",
+          "className": "card-btn",
           "onClick": [Function],
         },
         "ref": null,
@@ -165,32 +180,41 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": Array [
-          <h1
+          <img
+            className="x-icon"
             onClick={[MockFunction]}
-          >
-            Click here to return
-          </h1>,
+            src="xIcon.svg"
+          />,
           <img
             alt="NFL team"
+            className="card-img"
             src="https://cdn.vox-cdn.com/thumbor/M5Gx-DCa9eRAqw_aqIyuG6I2wDo=/0x0:4777x3021/1200x800/filters:focal(2094x550:2858x1314)/cdn.vox-cdn.com/uploads/chorus_image/image/62274919/usa_today_11648254.0.jpg"
           />,
-          <h2>
+          <h2
+            className="team-info"
+          >
             Arizona Cardinals
           </h2>,
-          <h2>
+          <h2
+            className="team-info"
+          >
             Glendale
             , 
             Arizona
           </h2>,
-          <h2>
+          <h2
+            className="team-info"
+          >
             NFC West
           </h2>,
           <button
+            className="card-btn"
             onClick={[Function]}
           >
             Show City Info
           </button>,
         ],
+        "className": "card",
       },
       "ref": null,
       "rendered": Array [
@@ -199,12 +223,13 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "children": "Click here to return",
+            "className": "x-icon",
             "onClick": [MockFunction],
+            "src": "xIcon.svg",
           },
           "ref": null,
-          "rendered": "Click here to return",
-          "type": "h1",
+          "rendered": null,
+          "type": "img",
         },
         Object {
           "instance": null,
@@ -212,6 +237,7 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "alt": "NFL team",
+            "className": "card-img",
             "src": "https://cdn.vox-cdn.com/thumbor/M5Gx-DCa9eRAqw_aqIyuG6I2wDo=/0x0:4777x3021/1200x800/filters:focal(2094x550:2858x1314)/cdn.vox-cdn.com/uploads/chorus_image/image/62274919/usa_today_11648254.0.jpg",
           },
           "ref": null,
@@ -224,6 +250,7 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "children": "Arizona Cardinals",
+            "className": "team-info",
           },
           "ref": null,
           "rendered": "Arizona Cardinals",
@@ -239,6 +266,7 @@ ShallowWrapper {
               ", ",
               "Arizona",
             ],
+            "className": "team-info",
           },
           "ref": null,
           "rendered": Array [
@@ -254,6 +282,7 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "children": "NFC West",
+            "className": "team-info",
           },
           "ref": null,
           "rendered": "NFC West",
@@ -265,6 +294,7 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "children": "Show City Info",
+            "className": "card-btn",
             "onClick": [Function],
           },
           "ref": null,

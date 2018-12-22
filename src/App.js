@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { nflTeams, cities } from './dataset/nfl-cities'
 import Container from './Container.js'
 import Nav from './Nav.js'
 import './reset.css';
@@ -14,7 +13,8 @@ class App extends Component {
     this.state = {
       nflTeams: null,
       cities: null,
-      isLoading: true
+      isLoading: true,
+      allTeams: null
     } 
   }
 
@@ -30,7 +30,8 @@ class App extends Component {
       setTimeout(() => {
         this.setState({
           nflTeams: data.nflTeams,
-          isLoading: false
+          isLoading: false,
+          allTeams: data.nflTeams
         })
       }, 1000);
     }).catch(err => console.log(err))
@@ -47,7 +48,7 @@ class App extends Component {
       return;
     }
 
-    let matched = nflTeams.filter(team => {
+    let matched = this.state.nflTeams.filter(team => {
       return team.name.toLowerCase().includes(input.toLowerCase())
     })
 
@@ -56,22 +57,19 @@ class App extends Component {
   
   findSelectedDivision = (input) => { 
     let matched; 
-    if (input.length === 3) {
-      matched = nflTeams.filter(team => {
-
-        return team.division.substring(0, 3).toLocaleLowerCase() === input;
+    if (input === 'all') {
+      this.setState({nflTeams: this.state.allTeams})
+    } else if (input.length === 3 && input !== 'all') {
+      matched = this.state.nflTeams.filter(team => {
+        return team.division.includes(input).toLowerCase();
       })
       this.setState({nflTeams: matched})
     } else {
-
       var alterInput = input.split('-');
       alterInput[0] = alterInput[0].toUpperCase();
-
       alterInput[1] = alterInput[1].charAt(0).toUpperCase() + alterInput[1].substring(1)
-
       input = alterInput.join(' ');
-
-      matched = nflTeams.filter(team => {
+      matched = this.state.nflTeams.filter(team => {
         return team.division === input;
       })
       this.setState({nflTeams: matched})
@@ -81,24 +79,25 @@ class App extends Component {
   render() {
     if (this.state.isLoading) {
       return(
-        <div className="loading-screen"> <img className="loading-image" src={loadingGif} alt="loading screen"/> </div>
+        <div className="loading-screen"> <img className="loading-image" src={loadingGif} alt="loading screen"/></div>
         )
     } else if (this.state.nflTeams.length === 0) { 
       return (
         <div className="app">
           <div className='app-title-area'>
             <h1 className='app-title'>
-              <img src={nflLogo} alt="" />
+              <img className="icon-img" src={nflLogo} alt="" />
               The Traveling Fan
-              <img src={nflLogo} alt="" />
+              <img className="icon-img" src={nflLogo} alt="" />
             </h1>
           </div>
           <div>
-            <Nav findSearchedTeam={this.findSearchedTeam} findSelectedDivision={this.findSelectedDivision} />
+            <Nav 
+              findSearchedTeam={this.findSearchedTeam} 
+              findSelectedDivision={this.findSelectedDivision} />
           </div>
           <div className="flex">
-            <h1>PLEASE TRY AGAIN</h1>
-            {/* <Container nflTeams={this.state.nflTeams} cities={this.state.cities} /> */}
+            <h1 className="search-error-message">No Results Found</h1>
           </div>
         </div>
       )
@@ -113,11 +112,14 @@ class App extends Component {
             </h1>
           </div>
           <div>
-            <Nav findSearchedTeam={this.findSearchedTeam}
-                 findSelectedDivision={this.findSelectedDivision}/>
+            <Nav 
+              findSearchedTeam={this.findSearchedTeam}
+              findSelectedDivision={this.findSelectedDivision} />
           </div>
           <div className="flex">
-            <Container nflTeams={this.state.nflTeams} cities={this.state.cities} />
+            <Container 
+              nflTeams={this.state.nflTeams} 
+              cities={this.state.cities} />
           </div>
         </div>
       );

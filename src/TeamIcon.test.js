@@ -2,6 +2,7 @@ import React from 'react';
 import TeamIcon from './TeamIcon.js';
 import { shallow } from 'enzyme';
 
+const mockTeamColor = 'arizona-cardinals'
 const mockClick = jest.fn();
 const mockGetIndex = jest.fn();
 const mockToggleFunction = jest.fn();
@@ -19,10 +20,12 @@ describe('TeamIcon', () => {
   let wrapper;
 
   beforeEach(() => {
+
     wrapper = shallow(
       <TeamIcon 
-        nflTeam={nflTeam}
+        teamColor={mockTeamColor}
         toggleIconFunctions={mockToggleFunction}
+        nflTeam={nflTeam}
         index={index}
         />
       )
@@ -33,7 +36,7 @@ describe('TeamIcon', () => {
   })
 
   it('should recognize a click', () => {
-    wrapper.find('.icon').simulate('click')
+    wrapper.find('.arizona-cardinals').simulate('click')
     expect(mockToggleFunction).toBeCalled();
   })
 })

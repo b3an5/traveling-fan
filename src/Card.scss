@@ -9,6 +9,7 @@
   position: absolute;
   top: 185px;
   z-index: 3;
+
 }
 
 .card-img {
@@ -31,4 +32,8 @@
 
 .x-icon:hover {
   cursor: pointer;
+}
+
+.card-btn {
+  margin-bottom: 10px;
 }
