@@ -4,10 +4,10 @@ import './TeamIcon.scss';
 
 const TeamIcon = (props) => {
 
+  var teamColor = props.nflTeam.name.split(' ').join('-').toLowerCase();
   return(
-    <article className='icon' onClick={() => props.toggleIconFunctions(props.index)}>
-      {console.error('team icon line 14 fix for dataset')}
-      <img src={props.nflTeam.helmet_image} alt="team logo"/> 
+    <article className='icon' onClick={() => props.toggleIconFunctions(props.index)} className={teamColor}>
+      <img src={props.nflTeam.team_icon} alt="team logo"/> 
       <h2>{props.nflTeam.name}</h2>
     </article>
   )
