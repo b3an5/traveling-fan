@@ -45,7 +45,7 @@ export default class Container extends Component {
       )
     } else {
       return (
-        <main>
+        <main className="main-display">
           <Card nflTeams={this.props.nflTeams} 
                 cities={this.props.cities}
                 toggleCardView={this.toggleCardView}

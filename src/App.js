@@ -59,9 +59,9 @@ class App extends Component {
         <div className="app">
           <div className='app-title-area'>
             <h1 className='app-title'>
-              <img src={nflLogo} alt="" />
+              <img className='app-img' src={nflLogo} alt="" />
               The Traveling Fan
-              <img src={nflLogo} alt="" />
+              <img className='app-img' src={nflLogo} alt="" />
             </h1>
           </div>
           <div>

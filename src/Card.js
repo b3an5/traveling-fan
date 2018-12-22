@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './Card.scss';
+import xIcon from './images/xIcon.svg'
 
 export default class Card extends Component {
   constructor() {
@@ -30,19 +31,18 @@ export default class Card extends Component {
   }
 
   render() {
-    const xIcon = 'Click here to return';
     const selectedTeam = this.props.nflTeams[this.props.clickedIndex];
     const selectedCity = this.state.matchedCity;
 
     if (this.state.teamInfo) {
 
       return (
-        <div>
-          <h1 onClick={this.props.toggleCardView}>{xIcon}</h1>
-          <img src={selectedTeam.team_img} alt="NFL team"/>
-          <h2>{selectedTeam.name}</h2>
-          <h2>{selectedTeam.city}, {selectedTeam.state}</h2>
-          <h2>{selectedTeam.division}</h2>
+        <div className='card'>
+          <img className='x-icon' onClick={this.props.toggleCardView} src={xIcon} />
+          <img className="card-img" src={selectedTeam.team_img} alt="NFL team"/>
+          <h2 className='team-info' >{selectedTeam.name}</h2>
+          <h2 className='team-info' >{selectedTeam.city}, {selectedTeam.state}</h2>
+          <h2 className='team-info' >{selectedTeam.division}</h2>
           <button onClick={this.cityChange}>Show City Info</button>
         </div>
       )
@@ -51,9 +51,9 @@ export default class Card extends Component {
       const nums = [0, 1, 2, 3];
 
       return (
-        <div>
-          <h1 onClick={this.props.toggleCardView}>{xIcon}</h1>
-          <img src={selectedCity.city_image} alt="city" />
+        <div className='card'>
+          <img className='x-icon' onClick={this.props.toggleCardView} src={xIcon} />
+          <img className="card-img" src={selectedCity.city_image} alt="city" />
           <h2>{selectedCity.name}, {selectedCity.state}</h2>
           <h2>Population: {selectedCity.population}</h2>
           {nums.map((number) => {
