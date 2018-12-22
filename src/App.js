@@ -65,10 +65,6 @@ class App extends Component {
       })
       this.setState({nflTeams: matched})
     } else {
-      var alterInput = input.split('-');
-      alterInput[0] = alterInput[0].toUpperCase();
-      alterInput[1] = alterInput[1].charAt(0).toUpperCase() + alterInput[1].substring(1)
-      input = alterInput.join(' ');
       matched = this.state.nflTeams.filter(team => {
         return team.division === input;
       })

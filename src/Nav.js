@@ -6,7 +6,7 @@ export default class Nav extends Component {
     super();
     this.state = {
       team: null,
-      selectedValue: 'afc'
+      selectedValue: 'all'
     }
   }
 
@@ -46,17 +46,17 @@ export default class Nav extends Component {
           <select id="division-select"
                   value={this.state.selectedValue}
                   onChange={this.handleChange} >
-            <option value="allgi">--Show All--</option>
-            <option value="afc">--AFC Division--</option>
-            <option value="afc-north">AFC North</option>
-            <option value="afc-east">AFC East</option>
-            <option value="afc-south">AFC South</option>
-            <option value="afc-west">AFC West</option>
-            <option value="nfc">--NFC Division--</option>
-            <option value="nfc-north">NFC North</option>
-            <option value="nfc-east">NFC East</option>
-            <option value="nfc-south">NFC South</option>
-            <option value="nfc-west">NFC West</option>
+            <option value="all">--Show All--</option>
+            <option value="AFC">--AFC Division--</option>
+            <option value="AFC North">AFC North</option>
+            <option value="AFC East">AFC East</option>
+            <option value="AFC South">AFC South</option>
+            <option value="AFC West">AFC West</option>
+            <option value="NFC">--NFC Division--</option>
+            <option value="NFC North">NFC North</option>
+            <option value="NFC East">NFC East</option>
+            <option value="NFC South">NFC South</option>
+            <option value="NFC West">NFC West</option>
           </select>
           <button className="select-btn"
             type="submit"
