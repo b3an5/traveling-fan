@@ -61,7 +61,7 @@ class App extends Component {
       this.setState({nflTeams: this.state.allTeams})
     } else if (input.length === 3 && input !== 'all') {
       matched = this.state.nflTeams.filter(team => {
-        return team.division.includes(input).toLowerCase();
+        return team.division.includes(input);
       })
       this.setState({nflTeams: matched})
     } else {
