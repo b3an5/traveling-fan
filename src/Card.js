@@ -30,6 +30,16 @@ export default class Card extends Component {
     this.toggleCityInfo();
   }
 
+  cityCarouselLeft = () => {
+    this.toggleCityInfo();
+    this.props.teamCarouselLeft();
+  }
+  
+  cityCarouselRight = () => {
+    this.toggleCityInfo();
+    this.props.teamCarouselRight();
+  }
+
   render() {
     const selectedTeam = this.props.nflTeams[this.props.clickedIndex];
     const selectedCity = this.state.matchedCity;
@@ -44,6 +54,8 @@ export default class Card extends Component {
           <h2 className='team-info' >{selectedTeam.city}, {selectedTeam.state}</h2>
           <h2 className='team-info' >{selectedTeam.division}</h2>
           <button onClick={this.cityChange}>Show City Info</button>
+          <h1 className='left-carot carot' onClick={this.props.teamCarouselLeft}>&laquo;</h1>
+          <h1 className='right-carot carot' onClick={this.props.teamCarouselRight}>&raquo;</h1>
         </div>
       )
     } else {
@@ -61,9 +73,10 @@ export default class Card extends Component {
             return  <h2><a href={link} target="_blank" rel="noopener noreferrer" >{selectedCity.attractions[`${number}`]}</a></h2>
           })}
           <button onClick={this.toggleCityInfo}>Show Team Info</button>
+          <h1 className='left-carot carot' onClick={this.cityCarouselLeft}>&laquo;</h1>
+          <h1 className='right-carot carot' onClick={this.cityCarouselRight}>&raquo;</h1>
         </div>
       )
     }
   }
-
 }
