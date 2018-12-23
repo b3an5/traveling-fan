@@ -29,6 +29,30 @@ export default class Container extends Component {
     this.getIndex(index)
   }
 
+  teamCarouselRight = () => {
+    if (this.state.clickedIndex !== 31) {
+      this.setState({
+        clickedIndex: this.state.clickedIndex + 1
+      })
+    } else {
+      this.setState({
+        clickedIndex: 0
+      })
+    }
+  }
+  
+  teamCarouselLeft = () => {
+    if (this.state.clickedIndex !== 0) {
+      this.setState({
+        clickedIndex: this.state.clickedIndex - 1
+      })
+    } else {
+      this.setState({
+        clickedIndex: 31
+      })
+    }
+  }
+
   render() {
     if(this.state.enlargeCard === false) {
       return(
@@ -50,7 +74,9 @@ export default class Container extends Component {
           <Card nflTeams={this.props.nflTeams} 
                 cities={this.props.cities}
                 toggleCardView={this.toggleCardView}
-                clickedIndex={this.state.clickedIndex} />
+                clickedIndex={this.state.clickedIndex}
+                teamCarouselLeft={this.teamCarouselLeft}
+                teamCarouselRight={this.teamCarouselRight} />
         </main>
       )
     }
