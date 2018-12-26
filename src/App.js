@@ -88,7 +88,7 @@ class App extends Component {
             </h1>
           </div>
           <div>
-            <Nav 
+            <Nav
               findSearchedTeam={this.findSearchedTeam} 
               findSelectedDivision={this.findSelectedDivision} />
           </div>
