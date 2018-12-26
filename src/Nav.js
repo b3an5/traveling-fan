@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import './css/Nav.scss';
-
 export default class Nav extends Component {
   constructor() {
     super();
