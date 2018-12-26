@@ -48,7 +48,7 @@ class App extends Component {
       return;
     }
 
-    let matched = this.state.nflTeams.filter(team => {
+    let matched = this.state.allTeams.filter(team => {
       return team.name.toLowerCase().includes(input.toLowerCase())
     })
 
@@ -60,12 +60,12 @@ class App extends Component {
     if (input === 'all') {
       this.setState({nflTeams: this.state.allTeams})
     } else if (input.length === 3 && input !== 'all') {
-      matched = this.state.nflTeams.filter(team => {
+      matched = this.state.allTeams.filter(team => {
         return team.division.includes(input);
       })
       this.setState({nflTeams: matched})
     } else {
-      matched = this.state.nflTeams.filter(team => {
+      matched = this.state.allTeams.filter(team => {
         return team.division === input;
       })
       this.setState({nflTeams: matched})
