@@ -34,6 +34,22 @@
   cursor: pointer;
 }
 
+.carot {
+  cursor: pointer;
+  position: absolute;
+  font-size: 3em
+}
+
+.left-carot {
+  left: 0;
+  top: 78%
+}
+
+.right-carot {
+  right: 0;
+  top: 78%;
+} 
+
 .card-btn {
   margin-bottom: 10px;
 }
