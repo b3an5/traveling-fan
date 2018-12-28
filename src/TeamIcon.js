@@ -5,9 +5,15 @@ import './css/TeamIcon.scss';
 const TeamIcon = (props) => {
 
   return(
-    <article onClick={() => props.toggleIconFunctions(props.index)} className={props.teamColor}>
-      <img src={props.nflTeam.team_icon} className="icon-img" alt="team logo"/> 
-      <h2>{props.nflTeam.name}</h2>
+    <article
+      onClick={props.showTeamInfo()}
+      className={props.teamColor}>
+      <img
+        src={props.nflTeam.team_icon}
+        onClick={props.showTeamInfo()}  className="icon-img" alt="team logo" /> 
+      <h2 onClick={props.showTeamInfo()}>
+        {props.nflTeam.name}
+      </h2>
     </article>
   )
 }

@@ -83,6 +83,16 @@ ShallowWrapper {
         >
           Show City Info
         </button>,
+        <h1
+          className="left-carot carot"
+        >
+          «
+        </h1>,
+        <h1
+          className="right-carot carot"
+        >
+          »
+        </h1>,
       ],
       "className": "card",
     },
@@ -172,6 +182,32 @@ ShallowWrapper {
         "rendered": "Show City Info",
         "type": "button",
       },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "«",
+          "className": "left-carot carot",
+          "onClick": undefined,
+        },
+        "ref": null,
+        "rendered": "«",
+        "type": "h1",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "»",
+          "className": "right-carot carot",
+          "onClick": undefined,
+        },
+        "ref": null,
+        "rendered": "»",
+        "type": "h1",
+      },
     ],
     "type": "div",
   },
@@ -216,6 +252,16 @@ ShallowWrapper {
           >
             Show City Info
           </button>,
+          <h1
+            className="left-carot carot"
+          >
+            «
+          </h1>,
+          <h1
+            className="right-carot carot"
+          >
+            »
+          </h1>,
         ],
         "className": "card",
       },
@@ -304,6 +350,32 @@ ShallowWrapper {
           "ref": null,
           "rendered": "Show City Info",
           "type": "button",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "«",
+            "className": "left-carot carot",
+            "onClick": undefined,
+          },
+          "ref": null,
+          "rendered": "«",
+          "type": "h1",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "»",
+            "className": "right-carot carot",
+            "onClick": undefined,
+          },
+          "ref": null,
+          "rendered": "»",
+          "type": "h1",
         },
       ],
       "type": "div",

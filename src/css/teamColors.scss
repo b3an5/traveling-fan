@@ -8,7 +8,7 @@ $hov-bg: 0.95;
 .arizona-cardinals {
   @include icon-bg(rgba(151,35,63, $reg-bg), rgba(0,0,0, $reg-bg))
   &:hover { 
-    @include icon-bg(rgba(255,182,18, $hov-bg), rgba(151,35,63, $hov-bg)) 
+    @include icon-bg(rgba(255,182,18, $hov-bg), rgba(151,35,63, $hov-bg))
   }
 }
 
