@@ -5,11 +5,9 @@ import './css/reset.css';
 import './css/App.css';
 import loadingGif from './images/football.gif';
 import nflLogo from './images/nfl-logo.png';
-
 class App extends Component {
   constructor(){
     super();
-
     this.state = {
       nflTeams: null,
       cities: null,
@@ -44,10 +42,6 @@ class App extends Component {
   }
 
   findSearchedTeam = (input) => {
-    if (input === null || input === undefined) {
-      return;
-    }
-
     let matched = this.state.allTeams.filter(team => {
       return team.name.toLowerCase().includes(input.toLowerCase())
     })
@@ -74,9 +68,9 @@ class App extends Component {
 
   render() {
     if (this.state.isLoading) {
-      return(
+      return (
         <div className="loading-screen"> <img className="loading-image" src={loadingGif} alt="loading screen"/></div>
-        )
+      )
     } else if (this.state.nflTeams.length === 0) { 
       return (
         <div className="app">
@@ -88,7 +82,7 @@ class App extends Component {
             </h1>
           </div>
           <div>
-            <Nav 
+            <Nav
               findSearchedTeam={this.findSearchedTeam} 
               findSelectedDivision={this.findSelectedDivision} />
           </div>

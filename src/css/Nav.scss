@@ -1,34 +1,68 @@
+$white-outline: -1px -1px 0 #fff, 1px -1px 0 #fff, 
+                -1px 1px 0 #fff, 1px 1px 0 #fff;
+$nfl-red: #DA2227;
+$nfl-blue: #003B73;
+
+@mixin inputStyling() {
+  color: $nfl-blue;
+  text-shadow: $white-outline;
+  background-color: white;
+  border: 5px solid $nfl-red;
+  border-radius: 15px;
+}
+
+@mixin inputHoverStyling() {
+  background-color: $nfl-red;
+  border: 5px solid white;  
+}
+
 nav {
-  background: url('../images/nav-bg.png');
-  background-size: cover;
-  height: 100px;
+  height: 120px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-form input, form label {
-  margin: 0 80px;
+form {
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
 }
 
 form label {
-  font-size: 2rem;
-
+  color: $nfl-red;
+  font-size: 3rem;
+  font-weight: 900;
+  margin: 0 -15%;
+  padding-top: 8px;
+  text-shadow: $white-outline;
 }
 
 input {
+  @include inputStyling();
+  font-size: 2rem;
+  font-weight: 900;
   height: 50px;
+  padding-left: 20px;
   width: 300px;
-  font-size: 1.3rem;
+  &:hover { @include inputHoverStyling() }
+  &::placeholder { color: $nfl-blue }
 }
 
-button {
-  height: 52px;
-  width: 150px;
+select{
+  @include inputStyling();
+  font-size: 1.5rem;
+  font-weight: 900;
+  height: 62px;
+  padding: 5px;
+  width: 331px;
+  &:hover { @include inputHoverStyling() }
 }
 
-select {
-  font-size: 1.3rem;
-  height: 50px;
-  width: 200px;
-}
+// TODO: SUPPOSED TO CHANGE DROPDOWN COLORING
+// select option { 
+//   color: black;
+//   &:first-child {
+//     background-color: $nfl-red;
+//   }
+// }

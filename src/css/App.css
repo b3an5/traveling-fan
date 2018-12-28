@@ -47,6 +47,12 @@
   max-width: 100%;
 }
 
+.nav-area {
+  background: url('../images/nav.jpg');
+  height: 120px;
+  opacity: .8;
+}
+
 
 @keyframes App-logo-spin {
   from {
