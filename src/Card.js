@@ -56,7 +56,7 @@ export default class Card extends Component {
       )
     } else {
 
-      const nums = [0, 1, 2, 3];
+      const cityAttractions = this.props.cities[this.props.clickedIndex].attractions;
 
       return (
         <div className='card'>
@@ -64,9 +64,9 @@ export default class Card extends Component {
           <img className="card-img" src={selectedCity.city_image} alt="city" />
           <h2>{selectedCity.name}, {selectedCity.state}</h2>
           <h2>Population: {selectedCity.population}</h2>
-          {nums.map((number) => {
-            let link = `https://google.com/search?q=${selectedCity.attractions[`${number}`].trim().split(' ').join('%20')}`;
-            return  <h2><a href={link} target="_blank" rel="noopener noreferrer" >{selectedCity.attractions[`${number}`]}</a></h2>
+          {cityAttractions.map((attraction) => {
+            let link = `https://google.com/search?q=${`${attraction}`.trim().split(' ').join('%20')}`;
+            return  <h2><a href={link} target="_blank" rel="noopener noreferrer" >{attraction}</a></h2>
           })}
           <button onClick={this.toggleCityInfo} className="card-btn">Show Team Info</button>
           <h1 className='left-carot carot' onClick={this.cityCarouselLeft}>&laquo;</h1>
