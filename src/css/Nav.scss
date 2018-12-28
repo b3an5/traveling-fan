@@ -1,3 +1,21 @@
+$white-outline: -1px -1px 0 #fff, 1px -1px 0 #fff, 
+                -1px 1px 0 #fff, 1px 1px 0 #fff;
+$nfl-red: #DA2227;
+$nfl-blue: #003B73;
+
+@mixin inputStyling() {
+  color: $nfl-blue;
+  text-shadow: $white-outline;
+  background-color: white;
+  border: 5px solid $nfl-red;
+  border-radius: 15px;
+}
+
+@mixin inputHoverStyling() {
+  background-color: $nfl-red;
+  border: 5px solid white;  
+}
+
 nav {
   height: 120px;
   display: flex;
@@ -12,66 +30,39 @@ form {
 }
 
 form label {
+  color: $nfl-red;
   font-size: 3rem;
   font-weight: 900;
-  padding-top: 8px;
   margin: 0 -15%;
-  color: #DA2227;
-  text-shadow:
-    -1px -1px 0 #fff,
-    1px -1px 0 #fff,
-    -1px 1px 0 #fff,
-    1px 1px 0 #fff;
+  padding-top: 8px;
+  text-shadow: $white-outline;
 }
 
 input {
-  height: 50px;
-  width: 300px;
+  @include inputStyling();
   font-size: 2rem;
   font-weight: 900;
-  color: #003B73;
-  text-shadow:
-		-1px -1px 0 #fff,
-		1px -1px 0 #fff,
-		-1px 1px 0 #fff,
-		1px 1px 0 #fff;
-  background-color: white;
+  height: 50px;
   padding-left: 20px;
-  &:hover {
-    background-color: #DA2227;
-    border: 5px solid white;
-  }
-  &::placeholder {
-    color: #003B73;
-  }
-  border: 5px solid #DA2227;
-  border-radius: 15px;
+  width: 300px;
+  &:hover { @include inputHoverStyling() }
+  &::placeholder { color: $nfl-blue }
 }
 
 select{
+  @include inputStyling();
   font-size: 1.5rem;
   font-weight: 900;
-  width: 331px;
   height: 62px;
   padding: 5px;
-  color: #003B73;
-  text-shadow:
-  -1px -1px 0 #fff,
-  1px -1px 0 #fff,
-  -1px 1px 0 #fff,
-  1px 1px 0 #fff;
-  border: 5px solid #DA2227;
-  border-radius: 15px;
-  background-color: white;
-  &:hover {
-    background-color: #DA2227;
-    border: 5px solid white;
-  }
+  width: 331px;
+  &:hover { @include inputHoverStyling() }
 }
 
-select option { 
-  color: black;
-  &:first-child {
-    background-color: #DA2227;
-  }
-}
+// TODO: SUPPOSED TO CHANGE DROPDOWN COLORING
+// select option { 
+//   color: black;
+//   &:first-child {
+//     background-color: $nfl-red;
+//   }
+// }
