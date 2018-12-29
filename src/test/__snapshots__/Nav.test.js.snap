@@ -40,7 +40,6 @@ ShallowWrapper {
           value="init"
         >
           <option
-            className="hello"
             disabled={true}
             value="init"
           >
@@ -136,7 +135,6 @@ ShallowWrapper {
             value="init"
           >
             <option
-              className="hello"
               disabled={true}
               value="init"
             >
@@ -241,7 +239,6 @@ ShallowWrapper {
           "props": Object {
             "children": Array [
               <option
-                className="hello"
                 disabled={true}
                 value="init"
               >
@@ -321,7 +318,6 @@ ShallowWrapper {
               "nodeType": "host",
               "props": Object {
                 "children": "Select a Division: ",
-                "className": "hello",
                 "disabled": true,
                 "value": "init",
               },
@@ -517,7 +513,6 @@ ShallowWrapper {
             value="init"
           >
             <option
-              className="hello"
               disabled={true}
               value="init"
             >
@@ -613,7 +608,6 @@ ShallowWrapper {
               value="init"
             >
               <option
-                className="hello"
                 disabled={true}
                 value="init"
               >
@@ -718,7 +712,6 @@ ShallowWrapper {
             "props": Object {
               "children": Array [
                 <option
-                  className="hello"
                   disabled={true}
                   value="init"
                 >
@@ -798,7 +791,6 @@ ShallowWrapper {
                 "nodeType": "host",
                 "props": Object {
                   "children": "Select a Division: ",
-                  "className": "hello",
                   "disabled": true,
                   "value": "init",
                 },

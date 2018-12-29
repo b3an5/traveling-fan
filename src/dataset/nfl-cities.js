@@ -406,6 +406,13 @@ const cities = [
     "attractions": ["MetLife Stadium", "Meadowlands Sports Complex", "Meadowlands Museum", "Carlstadt Historical Society Museum"]
   },
   {
+    "name": "East Rutherford",
+    "state": "New Jersey",
+    "city_image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/New_York_Skyline_Manhattan.jpg/1200px-New_York_Skyline_Manhattan.jpg",
+    "population": 9856,
+    "attractions": ["MetLife Stadium", "Meadowlands Sports Complex", "Meadowlands Museum", "Carlstadt Historical Society Museum"]
+  },
+  {
     "name": "Oakland",
     "state": "California",
     "city_image": "https://dc51b5587d91a36df531-8880ed1a63c3e6388703e88e0de5d4df.ssl.cf1.rackcdn.com/properties/photos/40743380_1_1497291257.jpg",
@@ -425,6 +432,13 @@ const cities = [
     "city_image": "http://blog.jorgesantiagophoto.com/wp-content/uploads/2013/05/pittsburgh_skyline_2013-color.jpg",
     "population": 2353045,
     "attractions": ["Downtown Pittsburgh", "Phipps Conservatory", "Pittsburgh Zoo", "The Andy Warhol Museum"]
+  },
+  {
+    "name": "Los Angeles",
+    "state": "California",
+    "city_image": "https://cdn.trolleytours.com/wp-content/uploads/2016/06/san-diego-skyline-dusk.jpg",
+    "population": 1419516,
+    "attractions": ["Universal Studios Hollywood", "Disneyland", "Hollywood Walk of Fame", "Hollywood sign"]
   },
   {
     "name": "Los Angeles",
