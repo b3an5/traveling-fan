@@ -11,7 +11,8 @@ article {
   justify-content: center;
   text-align: center;
   margin: 10px;
-  background-image: radial-gradient(circle, rgba(255, 255, 255, 0.5), rgba(0, 0, 0, 0.5));  
+  background-image: radial-gradient(circle, rgba(255, 255, 255, 0.5), rgba(0, 0, 0, 0.5)); 
+  // transition: .3s all ease; 
 }
 
 article:hover {

@@ -1,72 +1,82 @@
 import React, { Component } from 'react';
 import './css/reset.css';
 import TeamIcon from './TeamIcon.js';
-import Card from './Card.js';
+import Popup from './Popup.js';
 import './css/Container.scss';
 
 export default class Container extends Component {
   constructor() {
     super();
+
     this.state = {
-      enlargeCard: false,
-      clickedIndex: null
+      displayTeamIcons: true,
+      teamToDisplay: null,
+      cityToDisplay: null
     }
   }
+      
+  switchToPopup = (event) => {
+    let targetWord = this.getTargetWord(event);
 
-  toggleCardView = () => {
-    this.setState({
-      enlargeCard: !this.state.enlargeCard
+    let currentTeam = this.props.nflTeams.find(team => {
+      return team.name.includes(targetWord);
     })
-    }
-
-  getIndex = (clickedTeam) => {
+    let currentCity = this.props.cities.find(city => {
+      return currentTeam.city === city.name;
+    })
+    
     this.setState({
-      clickedIndex: clickedTeam
+      displayTeamIcons: !this.state.displayTeamIcons,
+      teamToDisplay: currentTeam,
+      cityToDisplay: currentCity
     })
   }
 
-  toggleIconFunctions = (index) => {
-    this.toggleCardView();
-    this.getIndex(index)
+  getTargetWord(event) {
+    let teamName = event.target.parentElement.className.split('-');
+    let index = teamName[teamName.length - 1];
+    return index.charAt(0).toUpperCase() + index.slice(1);
   }
 
-  teamCarouselRight = () => {
-    if (this.state.clickedIndex !== 31) {
-      this.setState({
-        clickedIndex: this.state.clickedIndex + 1
-      })
+  showAllTeams = () => {
+    this.setState({
+      displayTeamIcons: true,
+      teamToDisplay: null
+    })
+  }
+
+  rotateCarousel = (num) => {
+    let index = this.props.nflTeams.indexOf(this.state.teamToDisplay)
+    let rightMax = 31, leftMax = 0;
+
+    if (index === leftMax && num < 0) {
+      this.setCarouselIndex(rightMax)
+    } else if (index === rightMax && num > 0) {
+      this.setCarouselIndex(leftMax)
     } else {
-      this.setState({
-        clickedIndex: 0
-      })
+      this.setCarouselIndex(index, num)
     }
   }
 
-  teamCarouselLeft = () => {
-    if (this.state.clickedIndex !== 0) {
-      this.setState({
-        clickedIndex: this.state.clickedIndex - 1
-      })
-    } else {
-      this.setState({
-        clickedIndex: 31
-      })
-    }
+  setCarouselIndex(index, num = 0) {
+    this.setState({
+      teamToDisplay: this.props.nflTeams[index + num],
+      cityToDisplay: this.props.cities[index + num]
+    })
   }
 
   render() {
-    if(this.state.enlargeCard === false) {
+    if (this.state.displayTeamIcons) {
       return(
         <main className="main-display main-display-icon">
           {
             this.props.nflTeams.map((nflTeam, index) => {
               return <TeamIcon 
                         teamColor={nflTeam.name.split(' ').join('-').toLowerCase()}
-                        toggleIconFunctions={this.toggleIconFunctions} 
-                        nflTeam={nflTeam} 
+                        switchToPopup={this.switchToPopup}
+                        nflTeam={nflTeam}
                         index={index}
-                        key={nflTeam.name}
-                                />
+                        key={nflTeam.name} />
             })
           }
         </main>
@@ -74,14 +84,12 @@ export default class Container extends Component {
     } else {
       return (
         <main className="main-display main-display-card">
-          <div className='card-background'></div>
-          <Card nflTeams={this.props.nflTeams} 
-                cities={this.props.cities}
-                toggleCardView={this.toggleCardView}
-                clickedIndex={this.state.clickedIndex}
-                teamCarouselLeft={this.teamCarouselLeft}
-                teamCarouselRight={this.teamCarouselRight}
-                key={this.props.nflTeams.name} />
+          <Popup
+            showAllTeams={this.showAllTeams}
+            team={this.state.teamToDisplay}
+            city={this.state.cityToDisplay}
+            rotateCarousel={this.rotateCarousel}
+            key={this.props.nflTeams.name} />
         </main>
       )
     }

@@ -2,12 +2,18 @@ import React from 'react';
 import './css/reset.css';
 import './css/TeamIcon.scss';
 
-const TeamIcon = (props) => {
+function TeamIcon(props) {
 
   return(
-    <article onClick={() => props.toggleIconFunctions(props.index)} className={props.teamColor}>
-      <img src={props.nflTeam.team_icon} className="icon-img" alt="team logo"/> 
-      <h2>{props.nflTeam.name}</h2>
+    <article className={props.teamColor}>
+      <img
+        src={props.nflTeam.team_icon}
+        onClick={props.switchToPopup}
+        className="icon-img"
+        alt="team logo" /> 
+      <h2 onClick={props.switchToPopup}>
+        {props.nflTeam.name}
+      </h2>
     </article>
   )
 }
