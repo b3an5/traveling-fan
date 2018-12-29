@@ -4,8 +4,6 @@ import App from '../App';
 import { shallow } from 'enzyme';
 import { nflTeams, cities } from '../dataset/nfl-cities.js'
 
-
-
 describe('App', () => {
   let wrapper;
 
@@ -54,15 +52,12 @@ describe('App', () => {
       isLoading: true,
       allTeams: null
     })
-    // wrapper.instance().componentDidMount()
     wrapper.instance().findSearchedTeam('denver')
     expect(wrapper.state()).toEqual({nflTeams: nflTeams[9]})
   })
 
-  it.skip('', () => {
-    
+  it.skip('should be able to find a selected division/conference', () => {
+    // don't forget to write this test, yo!
   })
-  it.skip('', () => {
-
-  })
+  
 });

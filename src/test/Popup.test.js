@@ -2,7 +2,6 @@ import React from 'react';
 import Popup from '../Popup.js';
 import { shallow } from 'enzyme';
 
-
 const fakeNflTeam = {
     "name": "Arizona Cardinals",
     "state": "Arizona",
@@ -64,5 +63,4 @@ describe('Popup', () => {
     wrapper.instance().rotateCarousel({target: {className: 'right-caret'}})
     expect(mockRotateCarousel).toBeCalled()
   })
-
 }) 
