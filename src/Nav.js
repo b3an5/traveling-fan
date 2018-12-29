@@ -3,6 +3,7 @@ import './css/Nav.scss';
 export default class Nav extends Component {
   constructor() {
     super();
+    
     this.state = {
       team: null,
       selectedValue: 'init'
@@ -28,7 +29,6 @@ export default class Nav extends Component {
                  placeholder="Enter team name"
                  onChange={this.setInputValue}/>
           <label htmlFor="division-select">-- OR --</label>
-
           <select id="division-select"
                   value={this.state.selectedValue}
                   onChange={this.setSelection} >

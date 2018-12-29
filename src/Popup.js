@@ -1,71 +1,63 @@
 import React, { Component } from 'react';
 import './css/Popup.scss';
-import Container from './Container.js'
 import Card from './Card.js'
 import City from './City.js'
 
 export default class Popup extends Component {
   constructor() {
     super();
-    this.state = {
-      showCity: false,
-      matchedCity: null
 
+    this.state = {
+      displayTeamInfo: true
     }
   }
 
-  findMatchingCity = () => {
-    const selectedTeam = this.props.nflTeams[this.props.clickedIndex];
-    let matchingCity = this.props.cities.find((city) => {
-      return selectedTeam.city === city.name
-    })
-    this.setState({ matchedCity: matchingCity })
-    this.toggleCityInfo();
-  }
-
-  toggleCityInfo = () => {
-    console.log('yelloasd')
+  switchPopupView = () => {
     this.setState({
-      showCity: !this.state.showCity
+      displayTeamInfo: !this.state.displayTeamInfo
     })
   }
 
-    // cityCarouselLeft = () => {
-  //   this.toggleCityInfo();
-  //   this.props.teamCarouselLeft();
-  // }
+  showAllTeams = () => { 
+    this.props.showAllTeams();
+  }
+  
+  rotateCarousel = (event) => {
+    let right = 1, left = -1;
 
-  // cityCarouselRight = () => {
-  //   this.toggleCityInfo();
-  //   this.props.teamCarouselRight();
-  // }
+    if (event.target.className.includes('right')) {
+      this.props.rotateCarousel(right);
+    }
+    if (event.target.className.includes('left')) {
+      this.props.rotateCarousel(left);
+    }
+  }
 
   render() {
-    if (this.state.showCity === false) {
+    if (this.state.displayTeamInfo) {
       return (
         <section>
           <div className='card-background'></div>
-          <Card nflTeams={this.props.nflTeams}
-            cities={this.props.cities}
-            showTeamInfo={this.showTeamInfo}
-            findMatchingCity={this.findMatchingCity}
-            clickedIndex={this.props.clickedIndex}
-            teamCarouselLeft={this.teamCarouselLeft}
-            teamCarouselRight={this.teamCarouselRight}
-            key={this.props.nflTeams.name} />
+          <Card
+            showAllTeams={this.showAllTeams}
+            switchPopupView={this.switchPopupView}
+            currentTeam={this.props.team}
+            currentCity={this.props.city}
+            rotateCarousel={this.rotateCarousel}
+            key={this.props.team.name} />
        </section>
       )
     } else {
       return (
         <section>
+          <div className='card-background'></div>
           <City
-            cities={this.props.cities}
-            showTeamInfo={this.showTeamInfo}
-            matchedCity={this.state.matchedCity}
-
-            clickedIndex={this.props.clickedIndex}
-            cityCarouselLeft={this.cityCarouselLeft}
-            cityCarouselRight={this.cityCarouselRight} />
+            showAllTeams={this.showAllTeams}
+            switchPopupView={this.switchPopupView}
+            currentTeam={this.props.team}
+            currentCity={this.props.city}
+            rotateCarousel={this.rotateCarousel}
+            key={this.props.city.name} />
         </section>
       )
     }

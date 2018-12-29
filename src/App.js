@@ -8,6 +8,7 @@ import nflLogo from './images/nfl-logo.png';
 class App extends Component {
   constructor(){
     super();
+
     this.state = {
       nflTeams: null,
       cities: null,
@@ -36,40 +37,49 @@ class App extends Component {
 
     this.getData('cities').then((city) => {
       this.setState({
-        cities: city.cities
+        cities: this.matchCitiesToTeams(city.cities)
       })
     }).catch(errrr => console.log(errrr))
+  }
+
+  matchCitiesToTeams(cities) {
+    let la = 25, ny = 20
+    cities.splice(ny, 0, cities[ny])
+    cities.splice(la, 0, cities[la])
+    return cities;
   }
 
   findSearchedTeam = (input) => {
     let matched = this.state.allTeams.filter(team => {
       return team.name.toLowerCase().includes(input.toLowerCase())
     })
-
     this.setState({nflTeams: matched})
  }
   
   findSelectedDivision = (input) => { 
-    let matched; 
     if (input === 'all') {
       this.setState({nflTeams: this.state.allTeams})
-    } else if (input.length === 3 && input !== 'all') {
-      matched = this.state.allTeams.filter(team => {
-        return team.division.includes(input);
-      })
-      this.setState({nflTeams: matched})
+    } else if (input === 'AFC' || input === 'NFC') {
+      this.setState({ nflTeams: this.getDivMatches(input)})
     } else {
-      matched = this.state.allTeams.filter(team => {
-        return team.division === input;
-      })
-      this.setState({nflTeams: matched})
+      this.setState({nflTeams: this.getDivMatches(input)})
     }
+  }
+
+  getDivMatches(input) {
+    return this.state.allTeams.filter(team => {
+      return team.division === input;
+    })
   }
 
   render() {
     if (this.state.isLoading) {
       return (
-        <div className="loading-screen"> <img className="loading-image" src={loadingGif} alt="loading screen"/></div>
+        <div className="loading-screen">
+          <img className="loading-image"
+               src={loadingGif}
+               alt="loading screen" />
+        </div>
       )
     } else if (this.state.nflTeams.length === 0) { 
       return (

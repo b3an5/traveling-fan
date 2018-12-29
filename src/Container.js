@@ -1,64 +1,82 @@
 import React, { Component } from 'react';
 import './css/reset.css';
 import TeamIcon from './TeamIcon.js';
-import Card from './Card.js';
 import Popup from './Popup.js';
 import './css/Container.scss';
 
 export default class Container extends Component {
   constructor() {
     super();
+
     this.state = {
       displayTeamIcons: true,
-      currentTeamToDisplay: null,
-      // clickedIndex: null
+      teamToDisplay: null,
+      cityToDisplay: null
     }
   }
       
-  showTeamInfo = (event) => {
+  switchToPopup = (event) => {
+    let targetWord = this.getTargetWord(event);
+
+    let currentTeam = this.props.nflTeams.find(team => {
+      return team.name.includes(targetWord);
+    })
+    let currentCity = this.props.cities.find(city => {
+      return currentTeam.city === city.name;
+    })
+    
     this.setState({
       displayTeamIcons: !this.state.displayTeamIcons,
-      // currentTeamToDisplay: event.target.parentElement.className
+      teamToDisplay: currentTeam,
+      cityToDisplay: currentCity
     })
   }
 
-  teamCarouselRight = () => {
-    if (this.state.clickedIndex !== 31) {
-      this.setState({
-        clickedIndex: this.state.clickedIndex + 1
-      })
+  getTargetWord(event) {
+    let teamName = event.target.parentElement.className.split('-');
+    let index = teamName[teamName.length - 1];
+    return index.charAt(0).toUpperCase() + index.slice(1);
+  }
+
+  showAllTeams = () => {
+    this.setState({
+      displayTeamIcons: true,
+      teamToDisplay: null
+    })
+  }
+
+  rotateCarousel = (num) => {
+    let index = this.props.nflTeams.indexOf(this.state.teamToDisplay)
+    let rightMax = 31, leftMax = 0;
+
+    if (index === leftMax && num < 0) {
+      this.setCarouselIndex(rightMax)
+    } else if (index === rightMax && num > 0) {
+      this.setCarouselIndex(leftMax)
     } else {
-      this.setState({
-        clickedIndex: 0
-      })
+      this.setCarouselIndex(index, num)
     }
   }
 
-  teamCarouselLeft = () => {
-    if (this.state.clickedIndex !== 0) {
-      this.setState({
-        clickedIndex: this.state.clickedIndex - 1
-      })
-    } else {
-      this.setState({
-        clickedIndex: 31
-      })
-    }
+  setCarouselIndex(index, num = 0) {
+    this.setState({
+      teamToDisplay: this.props.nflTeams[index + num],
+      cityToDisplay: this.props.cities[index + num]
+    })
   }
 
   render() {
-    if(this.state.displayTeamIcons) {
+    if (this.state.displayTeamIcons) {
       return(
         <main className="main-display main-display-icon">
           {
             this.props.nflTeams.map((nflTeam, index) => {
               return <TeamIcon 
-                  teamColor={nflTeam.name.split(' ').join('-').toLowerCase()}
-                  showTeamInfo={this.showTeamInfo}
-                  nflTeam={nflTeam}
-                  index={index}
-                  key={nflTeam.name}
-                  />
+                        teamColor={nflTeam.name.split(' ').join('-').toLowerCase()}
+                        switchToPopup={this.switchToPopup}
+                        nflTeam={nflTeam}
+                        index={index}
+                        key={nflTeam.name} />
             })
           }
         </main>
@@ -67,19 +85,11 @@ export default class Container extends Component {
       return (
         <main className="main-display main-display-card">
           <Popup
-            nflTeams={this.props.nflTeams}
-            cities={this.props.cities}
-            showTeamInfo={this.showTeamInfo}
-            // clickedIndex={this.state.clickedIndex}
+            showAllTeams={this.showAllTeams}
+            team={this.state.teamToDisplay}
+            city={this.state.cityToDisplay}
+            rotateCarousel={this.rotateCarousel}
             key={this.props.nflTeams.name} />
-          {/* <div className='card-background'></div>
-          <Card nflTeams={this.props.nflTeams} 
-                cities={this.props.cities}
-                toggleCardView={this.showTeamInfo}
-                clickedIndex={this.state.clickedIndex}
-                teamCarouselLeft={this.teamCarouselLeft}
-                teamCarouselRight={this.teamCarouselRight}
-                key={this.props.nflTeams.name} /> */}
         </main>
       )
     }
