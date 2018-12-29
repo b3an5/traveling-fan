@@ -22,9 +22,9 @@ function Card(props) {
       <button className="card-btn"
         onClick={props.switchPopupView}>
         Show City Info</button>
-      <h1 className='left-carot carot'
+      <h1 className='left-caret caret'
         onClick={props.rotateCarousel}>&laquo;</h1>
-      <h1 className='right-carot carot'
+      <h1 className='right-caret caret'
         onClick={props.rotateCarousel}>&raquo;</h1>
     </div>
   )

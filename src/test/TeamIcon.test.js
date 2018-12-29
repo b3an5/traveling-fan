@@ -2,11 +2,7 @@ import React from 'react';
 import TeamIcon from '../TeamIcon.js';
 import { shallow } from 'enzyme';
 
-const mockTeamColor = 'arizona-cardinals'
-const mockClick = jest.fn();
-const mockGetIndex = jest.fn();
-const mockToggleFunction = jest.fn();
-const nflTeam = [{
+const fakeNflTeam = [{
     "name": "Arizona Cardinals",
     "state": "Arizona",
     "city": "Glendale",
@@ -14,7 +10,9 @@ const nflTeam = [{
     "division": "NFC West",
     "team_img": "https://cdn.vox-cdn.com/thumbor/M5Gx-DCa9eRAqw_aqIyuG6I2wDo=/0x0:4777x3021/1200x800/filters:focal(2094x550:2858x1314)/cdn.vox-cdn.com/uploads/chorus_image/image/62274919/usa_today_11648254.0.jpg"
   }]
-const index = 0
+const mockTeamColor = 'arizona-cardinals'
+const mockSwitchToPopup = jest.fn()
+
 
 describe('TeamIcon', () => {
   let wrapper;
@@ -24,9 +22,10 @@ describe('TeamIcon', () => {
     wrapper = shallow(
       <TeamIcon 
         teamColor={mockTeamColor}
-        toggleIconFunctions={mockToggleFunction}
-        nflTeam={nflTeam}
-        index={index}
+        switchToPopup={mockSwitchToPopup}
+        nflTeam={fakeNflTeam}
+        index={0}
+        key={fakeNflTeam.name}
         />
       )
   });
@@ -35,8 +34,13 @@ describe('TeamIcon', () => {
     expect(wrapper).toMatchSnapshot();
   })
 
-  it('should recognize a click', () => {
-    wrapper.find('.arizona-cardinals').simulate('click')
-    expect(mockToggleFunction).toBeCalled();
+  it('should recognize a click on the icon image', () => {
+    wrapper.find('.icon-img').simulate('click')
+    expect(mockSwitchToPopup).toBeCalled();
+  })
+
+  it('should recognize a click on the team name', () => {
+    wrapper.find('h2').simulate('click')
+    expect(mockSwitchToPopup).toBeCalled();   
   })
 })

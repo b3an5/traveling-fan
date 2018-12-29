@@ -17,8 +17,8 @@ ShallowWrapper {
         },
       ]
     }
+    switchToPopup={[MockFunction]}
     teamColor="arizona-cardinals"
-    toggleIconFunctions={[MockFunction]}
   />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
@@ -37,11 +37,13 @@ ShallowWrapper {
         <img
           alt="team logo"
           className="icon-img"
+          onClick={[MockFunction]}
         />,
-        <h2 />,
+        <h2
+          onClick={[MockFunction]}
+        />,
       ],
       "className": "arizona-cardinals",
-      "onClick": [Function],
     },
     "ref": null,
     "rendered": Array [
@@ -52,6 +54,7 @@ ShallowWrapper {
         "props": Object {
           "alt": "team logo",
           "className": "icon-img",
+          "onClick": [MockFunction],
           "src": undefined,
         },
         "ref": null,
@@ -64,6 +67,7 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "children": undefined,
+          "onClick": [MockFunction],
         },
         "ref": null,
         "rendered": null,
@@ -82,11 +86,13 @@ ShallowWrapper {
           <img
             alt="team logo"
             className="icon-img"
+            onClick={[MockFunction]}
           />,
-          <h2 />,
+          <h2
+            onClick={[MockFunction]}
+          />,
         ],
         "className": "arizona-cardinals",
-        "onClick": [Function],
       },
       "ref": null,
       "rendered": Array [
@@ -97,6 +103,7 @@ ShallowWrapper {
           "props": Object {
             "alt": "team logo",
             "className": "icon-img",
+            "onClick": [MockFunction],
             "src": undefined,
           },
           "ref": null,
@@ -109,6 +116,7 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "children": undefined,
+            "onClick": [MockFunction],
           },
           "ref": null,
           "rendered": null,

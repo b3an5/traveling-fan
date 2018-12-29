@@ -19,14 +19,14 @@ function City(props) {
           props.currentCity.attractions.map((attraction) => {
             let formattedAttraction = `${attraction}`.trim().split(' ').join('%20');
             let link = `https://google.com/search?q=${formattedAttraction}`;
-            return <h2 key={attraction}><a href={link} target="_blank" rel="noopener noreferrer" >{attraction}</a></h2>
+            return <h2 className="google-link" key={attraction}><a href={link} target="_blank" rel="noopener noreferrer" >{attraction}</a></h2>
           })
         }
       <button className="card-btn"
               onClick={props.switchPopupView}>Show Team Info</button>
-      <h1 className='left-carot carot'
+      <h1 className='left-caret caret'
           onClick={props.rotateCarousel}>&laquo;</h1>
-      <h1 className='right-carot carot'
+      <h1 className='right-caret caret'
           onClick={props.rotateCarousel}>&raquo;</h1>
     </div>
 

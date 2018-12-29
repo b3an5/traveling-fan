@@ -57,19 +57,20 @@ class App extends Component {
  }
   
   findSelectedDivision = (input) => { 
+    let matched; 
     if (input === 'all') {
       this.setState({nflTeams: this.state.allTeams})
     } else if (input === 'AFC' || input === 'NFC') {
-      this.setState({ nflTeams: this.getDivMatches(input)})
+      matched = this.state.allTeams.filter(team => {
+        return team.division.includes(input);
+      })
+      this.setState({nflTeams: matched})
     } else {
-      this.setState({nflTeams: this.getDivMatches(input)})
+      matched = this.state.allTeams.filter(team => {
+        return team.division === input;
+      })
+      this.setState({nflTeams: matched})
     }
-  }
-
-  getDivMatches(input) {
-    return this.state.allTeams.filter(team => {
-      return team.division === input;
-    })
   }
 
   render() {
