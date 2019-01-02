@@ -47,7 +47,7 @@ export default class Container extends Component {
 
   rotateCarousel = (num) => {
     let index = this.props.nflTeams.indexOf(this.state.teamToDisplay)
-    let rightMax = 31, leftMax = 0;
+    let rightMax = this.props.nflTeams.length - 1, leftMax = 0;
 
     if (index === leftMax && num < 0) {
       this.setCarouselIndex(rightMax)
