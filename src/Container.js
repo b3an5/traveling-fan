@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
-import './css/reset.css';
+import './css/Main.scss';
 import TeamIcon from './TeamIcon.js';
 import Popup from './Popup.js';
-import './css/Container.scss';
 
 export default class Container extends Component {
   constructor() {

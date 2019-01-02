@@ -1,6 +1,6 @@
 import React from 'react';
-import './css/City.scss';
-import xIcon from './images/xIcon.svg';
+import './css/Main.scss';
+import xIcon from './images/x-icon.png'
 
 function City(props) {
 

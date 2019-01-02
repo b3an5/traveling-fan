@@ -1,6 +1,5 @@
 import React from 'react';
-import './css/reset.css';
-import './css/TeamIcon.scss';
+import './css/Main.scss';
 
 function TeamIcon(props) {
 

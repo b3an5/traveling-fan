@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './css/Popup.scss';
+import './css/Main.scss';
 import Card from './Card.js'
 import City from './City.js'
 
