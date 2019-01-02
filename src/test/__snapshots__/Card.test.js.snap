@@ -4,36 +4,33 @@ exports[`Card should match the snapshot with all data passed correctly to the ca
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <Card
-    cities={
-      Array [
-        Object {
-          "attractions": Array [
-            "Wildlife World Zoo",
-            "White Tank Mountain Regional Park",
-            "Westgate Arena",
-            "Thunderbird Conservation Park",
-          ],
-          "city_image": "http://res.cloudinary.com/simpleview/image/upload/v1529338630/clients/phoenix/58468198_2b66_4f1e_8687_e26d986f678a_10c75a12-fe18-44d2-ab79-ed92fdb8ff6f.jpg",
-          "name": "Glendale",
-          "population": 226721,
-          "state": "Arizona",
-        },
-      ]
+    currentCity={
+      Object {
+        "attractions": Array [
+          "Wildlife World Zoo",
+          "White Tank Mountain Regional Park",
+          "Westgate Arena",
+          "Thunderbird Conservation Park",
+        ],
+        "city_image": "http://res.cloudinary.com/simpleview/image/upload/v1529338630/clients/phoenix/58468198_2b66_4f1e_8687_e26d986f678a_10c75a12-fe18-44d2-ab79-ed92fdb8ff6f.jpg",
+        "name": "Glendale",
+        "population": 226721,
+        "state": "Arizona",
+      }
     }
-    clickedIndex={0}
-    nflTeams={
-      Array [
-        Object {
-          "city": "Glendale",
-          "division": "NFC West",
-          "name": "Arizona Cardinals",
-          "state": "Arizona",
-          "team_icon": "http://assets.stickpng.com/thumbs/580b585b2edbce24c47b2aff.png",
-          "team_img": "https://cdn.vox-cdn.com/thumbor/M5Gx-DCa9eRAqw_aqIyuG6I2wDo=/0x0:4777x3021/1200x800/filters:focal(2094x550:2858x1314)/cdn.vox-cdn.com/uploads/chorus_image/image/62274919/usa_today_11648254.0.jpg",
-        },
-      ]
+    currentTeam={
+      Object {
+        "city": "Glendale",
+        "division": "NFC West",
+        "name": "Arizona Cardinals",
+        "state": "Arizona",
+        "team_icon": "http://assets.stickpng.com/thumbs/580b585b2edbce24c47b2aff.png",
+        "team_img": "https://cdn.vox-cdn.com/thumbor/M5Gx-DCa9eRAqw_aqIyuG6I2wDo=/0x0:4777x3021/1200x800/filters:focal(2094x550:2858x1314)/cdn.vox-cdn.com/uploads/chorus_image/image/62274919/usa_today_11648254.0.jpg",
+      }
     }
-    toggleCardView={[MockFunction]}
+    rotateCarousel={[MockFunction]}
+    showAllTeams={[MockFunction]}
+    switchPopupView={[MockFunction]}
   />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
@@ -79,17 +76,19 @@ ShallowWrapper {
         </h2>,
         <button
           className="card-btn"
-          onClick={[Function]}
+          onClick={[MockFunction]}
         >
           Show City Info
         </button>,
         <h1
-          className="left-carot carot"
+          className="left-caret caret"
+          onClick={[MockFunction]}
         >
           «
         </h1>,
         <h1
-          className="right-carot carot"
+          className="right-caret caret"
+          onClick={[MockFunction]}
         >
           »
         </h1>,
@@ -176,7 +175,7 @@ ShallowWrapper {
         "props": Object {
           "children": "Show City Info",
           "className": "card-btn",
-          "onClick": [Function],
+          "onClick": [MockFunction],
         },
         "ref": null,
         "rendered": "Show City Info",
@@ -188,8 +187,8 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "children": "«",
-          "className": "left-carot carot",
-          "onClick": undefined,
+          "className": "left-caret caret",
+          "onClick": [MockFunction],
         },
         "ref": null,
         "rendered": "«",
@@ -201,8 +200,8 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "children": "»",
-          "className": "right-carot carot",
-          "onClick": undefined,
+          "className": "right-caret caret",
+          "onClick": [MockFunction],
         },
         "ref": null,
         "rendered": "»",
@@ -248,17 +247,19 @@ ShallowWrapper {
           </h2>,
           <button
             className="card-btn"
-            onClick={[Function]}
+            onClick={[MockFunction]}
           >
             Show City Info
           </button>,
           <h1
-            className="left-carot carot"
+            className="left-caret caret"
+            onClick={[MockFunction]}
           >
             «
           </h1>,
           <h1
-            className="right-carot carot"
+            className="right-caret caret"
+            onClick={[MockFunction]}
           >
             »
           </h1>,
@@ -345,7 +346,7 @@ ShallowWrapper {
           "props": Object {
             "children": "Show City Info",
             "className": "card-btn",
-            "onClick": [Function],
+            "onClick": [MockFunction],
           },
           "ref": null,
           "rendered": "Show City Info",
@@ -357,8 +358,8 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "children": "«",
-            "className": "left-carot carot",
-            "onClick": undefined,
+            "className": "left-caret caret",
+            "onClick": [MockFunction],
           },
           "ref": null,
           "rendered": "«",
@@ -370,8 +371,8 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "children": "»",
-            "className": "right-carot carot",
-            "onClick": undefined,
+            "className": "right-caret caret",
+            "onClick": [MockFunction],
           },
           "ref": null,
           "rendered": "»",

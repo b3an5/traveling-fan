@@ -41,7 +41,8 @@ export default class Container extends Component {
   showAllTeams = () => {
     this.setState({
       displayTeamIcons: true,
-      teamToDisplay: null
+      teamToDisplay: null,
+      cityToDisplay: null
     })
   }
 
