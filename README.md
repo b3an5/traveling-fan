@@ -5,7 +5,9 @@
 ### Installation Steps
 
 ```git clone https://github.com/geet084/traveling-fan.git```
+
 ```npm install```
+
 ```npm start```
 
 ### Background/About
@@ -37,5 +39,7 @@
 
 ## Contributors
 [Travis Gee](https://github.com/geet084)
+
 [Theo Bean](https://github.com/b3an5)
+
 [Eric Fitzsimons](https://github.com/ericfitzsimons451)
