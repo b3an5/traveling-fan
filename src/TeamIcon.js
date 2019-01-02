@@ -9,8 +9,10 @@ function TeamIcon(props) {
       <img
         src={props.nflTeam.team_icon}
         className="icon-img"
+        onClick={props.switchToPopup}
         alt="team logo" /> 
-      <h2>
+      <h2 className="icon-text"
+          onClick={props.switchToPopup}>
         {props.nflTeam.name}
       </h2>
     </article>
