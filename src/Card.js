@@ -1,6 +1,7 @@
 import React from 'react';
 import './css/Card.scss';
-import xIcon from './images/xIcon.svg'
+// import xIcon from './images/xIcon.svg'
+import xIcon from './images/x-icon.png'
 
 function Card(props) {
 
