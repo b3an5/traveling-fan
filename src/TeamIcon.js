@@ -5,13 +5,13 @@ import './css/TeamIcon.scss';
 function TeamIcon(props) {
 
   return(
-    <article className={props.teamColor}>
+    <article className={props.teamColor}
+             onClick={props.switchToPopup}>
       <img
         src={props.nflTeam.team_icon}
-        onClick={props.switchToPopup}
         className="icon-img"
         alt="team logo" /> 
-      <h2 onClick={props.switchToPopup}>
+      <h2>
         {props.nflTeam.name}
       </h2>
     </article>

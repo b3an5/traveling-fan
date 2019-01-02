@@ -33,7 +33,7 @@ export default class Container extends Component {
   }
 
   getTargetWord(event) {
-    let teamName = event.target.parentElement.className.split('-');
+    let teamName = event.target.className.split('-');
     let index = teamName[teamName.length - 1];
     return index.charAt(0).toUpperCase() + index.slice(1);
   }
