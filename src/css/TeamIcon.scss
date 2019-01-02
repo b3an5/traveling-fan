@@ -1,4 +1,14 @@
 @import "teamColors.scss";
+$black-outline: -1px -1px 0 #000, 1px -1px 0 #000, 
+                -1px 1px 0 #000, 1px 1px 0 #000;
+$reg-bg: 0.5;
+$hov-bg: 0.95;
+
+@mixin icon-bg($colOne, $colTwo, $opacity) {
+  background-image: radial-gradient(circle, 
+                      rgba($colOne, $opacity), 
+                      rgba($colTwo, $opacity))
+}
 
 article {
   border: 2px solid white;
@@ -11,12 +21,15 @@ article {
   justify-content: center;
   text-align: center;
   margin: 10px;
+  color: white;
+  text-shadow: $black-outline;
   background-image: radial-gradient(circle, rgba(255, 255, 255, 0.5), rgba(0, 0, 0, 0.5)); 
   // transition: .3s all ease; 
 }
 
 article:hover {
   cursor: pointer;
+  border: 2px solid white;
   background-image: radial-gradient(circle, rgba(255, 255, 255, 0.95), rgba(0, 0, 0, 0.95));
 }
 
@@ -32,4 +45,228 @@ article:hover {
 h2 {
   font-size: 2em;
 
+}
+
+.arizona-cardinals {
+  @include icon-bg($cardinals-red, $cardinals-black, $reg-bg);
+  &:hover { 
+    @include icon-bg($cardinals-yellow, $cardinals-red, $hov-bg)
+  }
+}
+
+.atlanta-falcons {
+  @include icon-bg($falcons-red, $falcons-black, $reg-bg);  
+  &:hover {
+    @include icon-bg($falcons-grey, $falcons-red, $hov-bg);
+  }
+}
+
+.baltimore-ravens {
+  @include icon-bg($ravens-purple, $ravens-black, $reg-bg);  
+  &:hover {
+    @include icon-bg($ravens-yellow, $ravens-purple, $hov-bg);
+  }
+}
+
+.buffalo-bills {
+  @include icon-bg($bills-blue, $bills-red, $reg-bg);  
+  &:hover {
+    @include icon-bg($bills-red, $bills-blue, $hov-bg);
+  }
+}
+
+.carolina-panthers {
+  @include icon-bg($panthers-blue, $panthers-black, $reg-bg);  
+  &:hover {
+    @include icon-bg($panthers-grey, $panthers-blue, $hov-bg);
+  }
+}
+
+.chicago-bears {
+  @include icon-bg($bears-red, $bears-blue, $reg-bg);
+  &:hover {
+    @include icon-bg($bears-blue, $bears-red, $hov-bg);  
+  }
+}
+
+.cincinnati-bengals {
+  @include icon-bg($bengals-orange, $bengals-black, $reg-bg);
+  &:hover {
+    @include icon-bg($bengals-black, $bengals-orange, $hov-bg);  
+  }
+}
+
+.cleveland-browns {
+  @include icon-bg($browns-orange, $browns-brown, $reg-bg);
+  &:hover {
+    @include icon-bg($browns-brown, $browns-orange, $hov-bg);
+  }
+}
+
+.dallas-cowboys {
+  @include icon-bg($cowboys-dark-blue, $cowboys-grey, $reg-bg);  
+  &:hover {
+    @include icon-bg($cowboys-grey, $cowboys-blue, $hov-bg);
+  }
+}
+
+ .denver-broncos {
+  @include icon-bg($broncos-orange, $broncos-blue, $reg-bg);
+  &:hover {
+    @include icon-bg($broncos-blue, $broncos-orange, $hov-bg);
+  }
+}
+
+.detroit-lions {
+  @include icon-bg($lions-blue, $lions-black, $reg-bg);
+  &:hover {
+    @include icon-bg($lions-grey, $lions-blue, $hov-bg);
+  }
+}
+
+.green-bay-packers {
+  @include icon-bg($packers-yellow, $packers-green, $reg-bg);
+  &:hover {
+    @include icon-bg($packers-green, $packers-yellow, $hov-bg);
+  }
+}
+
+.houston-texans {
+  @include icon-bg($texans-blue, $texans-red, $reg-bg);  
+  &:hover {
+    @include icon-bg($texans-red, $texans-blue, $hov-bg);
+  }
+}
+
+.indianapolis-colts {
+  @include icon-bg($colts-blue, $colts-grey, $reg-bg);
+  &:hover {
+    @include icon-bg($colts-grey, $colts-blue, $hov-bg);
+  }
+}
+
+.jacksonville-jaguars {
+  @include icon-bg($jaguars-green, $jaguars-brown, $reg-bg);
+  &:hover {
+    @include icon-bg($jaguars-yellow, $jaguars-green, $hov-bg);
+  }
+}
+
+.kansas-city-chiefs {
+  @include icon-bg($chiefs-yellow, $chiefs-red, $reg-bg);
+  &:hover {
+    @include icon-bg($chiefs-red, $chiefs-yellow, $hov-bg);
+  }
+}
+
+.los-angeles-chargers {
+  @include icon-bg($chargers-yellow, $chargers-dark-blue, $reg-bg);
+  &:hover {
+    @include icon-bg($chargers-blue, $chargers-yellow, $hov-bg);
+  }
+}
+
+.los-angeles-rams {
+  @include icon-bg($rams-blue, $rams-yellow, $reg-bg);
+  &:hover {
+    @include icon-bg($rams-yellow, $rams-blue, $hov-bg);
+  }
+}
+
+.miami-dolphins {
+  @include icon-bg($dolphins-orange, $dolphins-blue, $reg-bg);
+  &:hover {
+    @include icon-bg($dolphins-dark-blue, $dolphins-orange, $hov-bg);
+  }
+}
+
+.minnesota-vikings {
+  @include icon-bg($vikings-yellow, $vikings-purple, $reg-bg);
+  &:hover {
+    @include icon-bg($vikings-purple, $vikings-yellow, $hov-bg);
+  }
+}
+
+.new-england-patriots {
+  @include icon-bg($patriots-grey, $patriots-red, $reg-bg);
+  &:hover {
+    @include icon-bg($patriots-red, $patriots-blue, $hov-bg);
+  }
+}
+
+.new-orleans-saints {
+  @include icon-bg($saints-yellow, $saints-black, $reg-bg);
+  &:hover {
+    @include icon-bg($saints-black, $saints-yellow, $hov-bg);
+  }
+}
+
+.new-york-giants {
+  @include icon-bg($giants-red, $giants-blue, $reg-bg);
+  &:hover {
+    @include icon-bg($giants-grey, $giants-red, $hov-bg);
+  }
+}
+
+.new-york-jets {
+  @include icon-bg($jets-green, $jets-white, $reg-bg);
+  &:hover {
+    @include icon-bg($jets-white, $jets-green, $hov-bg);
+  }
+}
+
+.oakland-raiders {
+  @include icon-bg($raiders-grey, $raiders-black, $reg-bg);
+  &:hover {
+    @include icon-bg($raiders-black, $raiders-grey, $hov-bg);
+  }
+}
+
+.philadelphia-eagles {
+  @include icon-bg($eagles-green, $eagles-grey, $reg-bg);
+  &:hover {
+    @include icon-bg($eagles-dark-grey, $eagles-green, $hov-bg);
+  }
+}
+
+.pittsburgh-steelers {
+  @include icon-bg($steelers-yellow, $steelers-black, $reg-bg);
+  &:hover {
+    @include icon-bg($steelers-black, $steelers-yellow, $hov-bg);
+  }
+}
+
+.san-francisco-49ers {
+  @include icon-bg($_49ers-red, $_49ers-yellow, $reg-bg);
+  &:hover {
+    @include icon-bg($_49ers-yellow, $_49ers-red, $hov-bg);
+  }
+}
+
+.seattle-seahawks {
+  @include icon-bg($seahawks-grey, $seahawks-green, $reg-bg);
+  &:hover {
+    @include icon-bg($seahawks-green, $seahawks-blue, $hov-bg);
+  }
+}
+
+.tampa-bay-buccaneers {
+  @include icon-bg($buccaneers-orange, $buccaneers-grey, $reg-bg);
+  &:hover {
+    @include icon-bg($buccaneers-red, $buccaneers-black, $hov-bg);
+  }
+}
+
+.tennessee-titans {
+  @include icon-bg($titans-red, $titans-blue, $reg-bg);
+  &:hover {
+    @include icon-bg($titans-dark-blue, $titans-grey, $hov-bg);
+  }
+}
+
+.washington-redskins {
+  @include icon-bg($redskins-red, $redskins-yellow, $reg-bg);
+  &:hover {
+    @include icon-bg($redskins-yellow, $redskins-red, $hov-bg);
+  }
 }

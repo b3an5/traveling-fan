@@ -1,231 +1,145 @@
-$reg-bg: 0.5;
-$hov-bg: 0.95;
-
-@mixin icon-bg($colOne, $colTwo) {
-  background-image: radial-gradient(circle, $colOne, $colTwo)
-}
-
-.arizona-cardinals {
-  @include icon-bg(rgba(151,35,63, $reg-bg), rgba(0,0,0, $reg-bg))
-  &:hover { 
-    @include icon-bg(rgba(255,182,18, $hov-bg), rgba(151,35,63, $hov-bg))
-  }
-}
-
-.atlanta-falcons {
-  @include icon-bg(rgba(167,25,48, $reg-bg), rgba(0, 0, 0, $reg-bg));  
-  &:hover {
-    @include icon-bg(rgba(165, 172, 175, $hov-bg), rgba(167,25,48, $hov-bg));
-  }
-}
-
-.baltimore-ravens {
-  @include icon-bg(rgba(26,25,95, $reg-bg), rgba(0, 0, 0, $reg-bg));  
-  &:hover {
-    @include icon-bg(rgba(158,124,12, $hov-bg), rgba(26,25,95, $hov-bg));
-  }
-}
 
 
-.buffalo-bills {
-  @include icon-bg(rgba(0,51,141, $reg-bg), rgba(198,12,48, $reg-bg));  
-  &:hover {
-    @include icon-bg(rgba(198,12,48, $hov-bg), rgba(0,51,141, $hov-bg));
-  }
-}
+$_49ers-red: rgb(170,0,0);
+$_49ers-yellow: rgb(173,153,93);
 
-.carolina-panthers {
-  @include icon-bg(rgba(0,133,202, $reg-bg), rgba(16,24,32, $reg-bg));  
-  &:hover {
-    @include icon-bg(rgba(191,192,191, $hov-bg), rgba(0,133,202, $hov-bg));
-  }
-}
 
-.chicago-bears {
-  @include icon-bg(rgba(200,56,3, $reg-bg), rgba(11,22,42, $reg-bg));
-  &:hover {
-    @include icon-bg(rgba(11,22,42, $hov-bg), rgba(200,56,3, $hov-bg));  
-  }
-}
+$cardinals-black: rgb(0,0,0);
+$cardinals-red: rgb(151,35,63);
+$cardinals-yellow: rgb(255,182,18);
 
-.cincinnati-bengals {
-  @include icon-bg(rgba(251,79,20, $reg-bg), rgba(0,0,0, $reg-bg));
-  &:hover {
-    @include icon-bg(rgba(0,0,0, $hov-bg), rgba(251,79,20, $hov-bg));  
-  }
-}
 
-.cleveland-browns {
-  @include icon-bg(rgba(255,60,0, $reg-bg), rgba(49,29,0, $reg-bg));  
-  &:hover {
-    @include icon-bg(rgba(49,29,0, $hov-bg), rgba(255,60,0, $hov-bg));
-  }
-}
+$falcons-black: rgb(0,0,0);
+$falcons-grey: rgb(165, 172, 175);
+$falcons-red: rgb(167,25,48);
 
-.dallas-cowboys {
-  @include icon-bg(rgba(0,34,68, $reg-bg), rgba(134,147,151, $reg-bg));  
-  &:hover {
-    @include icon-bg(rgba(134,147,151, $hov-bg), rgba(0,53,148, $hov-bg));
-  }
-}
 
- .denver-broncos {
-  @include icon-bg(rgba(251,79,20, $reg-bg), rgba(0,34,68, $reg-bg));  
-  &:hover {
-    @include icon-bg(rgba(0,34,68, $hov-bg), rgba(251,79,20, $hov-bg));
-  }
-}
+$ravens-black: rgb(0, 0, 0);
+$ravens-purple: rgb(26,25,95);
+$ravens-yellow: rgb(158,124,12);
 
-.detroit-lions {
-  @include icon-bg(rgba(0,118,182, $reg-bg), rgba(0,0,0, $reg-bg));  
-  &:hover {
-    @include icon-bg(rgba(176,183,188, $hov-bg), rgba(0,118,182, $hov-bg));
-  }
-}
 
-.green-bay-packers {
-  @include icon-bg(rgba(255,184,28, $reg-bg), rgba(24,48,40, $reg-bg));  
-  &:hover {
-    @include icon-bg(rgba(24,48,40, $hov-bg), rgba(255,184,28, $hov-bg));
-  }
-}
+$bills-blue: rgb(0,51,141);
+$bills-red: rgb(198,12,48);
 
-.houston-texans {
-  @include icon-bg(rgba(3,32,47, $reg-bg), rgba(167,25,48, $reg-bg));  
-  &:hover {
-    @include icon-bg(rgba(167,25,48, $hov-bg), rgba(3,32,47, $hov-bg));
-  }
-}
 
-.indianapolis-colts {
-  @include icon-bg(rgba(0,44,95, $reg-bg), rgba(162,170,173, $reg-bg));  
-  &:hover {
-    @include icon-bg(rgba(162,170,173, $hov-bg), rgba(0,44,95, $hov-bg));
-  }
-}
+$panthers-black: rgb(16,24,32);
+$panthers-blue: rgb(0,133,202);
+$panthers-grey: rgb(191,192,191);
 
-.jacksonville-jaguars {
-  @include icon-bg(rgba(0,103,120, $reg-bg), rgba(159,121,44, $reg-bg));  
-  &:hover {
-    @include icon-bg(rgba(215,162,42, $hov-bg), rgba(0,103,120, $hov-bg));
-  }
-}
 
-.kansas-city-chiefs {
-  @include icon-bg(rgba(255,184,28, $reg-bg), rgba(227,24,55, $reg-bg));  
-  &:hover {
-    @include icon-bg(rgba(227,24,55, $hov-bg), rgba(255,184,28, $hov-bg));
-  }
-}
+$bears-blue: rgb(11,22,42);
+$bears-red: rgb(200,56,3);
 
-.los-angeles-chargers {
-  @include icon-bg(rgba(255,194,14, $reg-bg), rgba(0,42,94, $reg-bg));  
-  &:hover {
-    @include icon-bg(rgba(0,128,198, $hov-bg), rgba(255,194,14, $hov-bg));
-  }
-}
 
-.los-angeles-rams {
-  @include icon-bg(rgba(0,34,68, $reg-bg), rgba(134,109,75, $reg-bg));  
-  &:hover {
-    @include icon-bg(rgba(134,109,75, $hov-bg), rgba(0,34,68, $hov-bg));
-  }
-}
+$bengals-black: rgb(0,0,0);
+$bengals-orange: rgb(251,79,20);
 
-.miami-dolphins {
-  @include icon-bg(rgba(242,106,36, $reg-bg), rgba(0,142,151, $reg-bg));  
-  &:hover {
-    @include icon-bg(rgba(0,87,120, $hov-bg), rgba(242,106,36, $hov-bg));
-  }
-}
 
-.minnesota-vikings {
-  @include icon-bg(rgba(255,198,47, $reg-bg), rgba(79,38,131, $reg-bg));  
-  &:hover {
-    @include icon-bg(rgba(79,38,131, $hov-bg), rgba(255,198,47, $hov-bg));
-  }
-}
+$browns-brown: rgb(49,29,0);
+$browns-orange: rgb(255,60,0);
 
-.new-england-patriots {
-  @include icon-bg(rgba(176,183,188, $reg-bg), rgba(198,12,48, $reg-bg));  
-  &:hover {
-    @include icon-bg(rgba(198,12,48, $hov-bg), rgba(0,34,68, $hov-bg));
-  }
-}
 
-.new-orleans-saints {
-  @include icon-bg(rgba(211,188,141, $reg-bg), rgba(16,24,31, $reg-bg));  
-  &:hover {
-    @include icon-bg(rgba(16,24,31, $hov-bg), rgba(211,188,141, $hov-bg));
-  }
-}
+$cowboys-blue: rgb(0,53,148);
+$cowboys-dark-blue: rgb(0,34,68);
+$cowboys-grey: rgb(134,147,151);
 
-.new-york-giants {
-  @include icon-bg(rgba(163,13,45, $reg-bg), rgba(1,35,82, $reg-bg));  
-  &:hover {
-    @include icon-bg(rgba(155,161,162, $hov-bg), rgba(163,13,45, $hov-bg));
-  }
-}
 
-.new-york-jets {
-  @include icon-bg(rgba(0,63,45, $reg-bg), rgba(255,255,255, $reg-bg));  
-  &:hover {
-    @include icon-bg(rgba(255,255,255, $hov-bg), rgba(0,63,45, $hov-bg));
-  }
-}
+$broncos-blue: rgb(0,34,68);
+$broncos-orange: rgb(251,79,20);
 
-.oakland-raiders {
-  @include icon-bg(rgba(165,172,175, $reg-bg), rgba(0,0,0, $reg-bg));  
-  &:hover {
-    @include icon-bg(rgba(0,0,0, $hov-bg), rgba(165,172,175, $hov-bg));
-  }
-}
 
-.philadelphia-eagles {
-  @include icon-bg(rgba(0,76,84, $reg-bg), rgba(186,202,211, $reg-bg));  
-  &:hover {
-    @include icon-bg(rgba(165,172,175, $hov-bg), rgba(0,76,84, $hov-bg));
-  }
-}
+$lions-black: rgb(0,0,0);
+$lions-blue: rgb(0,118,182);
+$lions-grey: rgb(176,183,188);
 
-.pittsburgh-steelers {
-  @include icon-bg(rgba(255,182,18, $reg-bg), rgba(0,0,0, $reg-bg));  
-  &:hover {
-    @include icon-bg(rgba(0,0,0, $hov-bg), rgba(255,182,18, $hov-bg));
-  }
-}
 
-.san-francisco-49ers {
-  @include icon-bg(rgba(170,0,0, $reg-bg), rgba(173,153,93, $reg-bg));  
-  &:hover {
-    @include icon-bg(rgba(173,153,93, $hov-bg), rgba(170,0,0, $hov-bg));
-  }
-}
+$packers-green: rgb(24,48,40);
+$packers-yellow: rgb(255,184,28);
 
-.seattle-seahawks {
-  @include icon-bg(rgba(165,172,175, $reg-bg), rgba(105,190,40, $reg-bg));  
-  &:hover {
-    @include icon-bg(rgba(105,190,40, $hov-bg), rgba(0,34,68, $hov-bg));
-  }
-}
 
-.tampa-bay-buccaneers {
-  @include icon-bg(rgba(255,121,0, $reg-bg), rgba(177,186,191, $reg-bg));  
-  &:hover {
-    @include icon-bg(rgba(213,10,10, $hov-bg), rgba(10,10,8, $hov-bg));
-  }
-}
+$texans-blue: rgb(3,32,47);
+$texans-red: rgb(167,25,48);
 
-.tennessee-titans {
-  @include icon-bg(rgba(218,33,40, $reg-bg), rgba(68,149,209, $reg-bg));  
-  &:hover {
-    @include icon-bg(rgba(0,42,92, $hov-bg), rgba(187,196,202, $hov-bg));
-  }
-}
 
-.washington-redskins {
-  @include icon-bg(rgba(63,16,16, $reg-bg), rgba(255,182,18, $reg-bg));  
-  &:hover {
-    @include icon-bg(rgba(255,182,18, $hov-bg), rgba(63,16,16, $hov-bg));
-  }
-}
+$colts-blue: rgb(0,44,95);
+$colts-grey: rgb(162,170,173);
+
+
+$jaguars-brown: rgb(159,121,44);
+$jaguars-green: rgb(0,103,120);
+$jaguars-yellow: rgb(215,162,42);
+
+
+$chiefs-red: rgb(227,24,55);
+$chiefs-yellow: rgb(255,184,28);
+
+
+$chargers-blue: rgb(0,128,198);
+$chargers-dark-blue: rgb(0,42,94);
+$chargers-yellow: rgb(255,194,14);
+
+
+$rams-blue: rgb(0,34,68);
+$rams-yellow: rgb(134,109,75);
+
+
+$dolphins-blue: rgb(0,142,151);
+$dolphins-dark-blue: rgb(0,87,120);
+$dolphins-orange: rgb(242,106,36);
+
+
+$vikings-purple: rgb(79,38,131);
+$vikings-yellow: rgb(255,198,47);
+
+
+$patriots-blue: rgb(0,34,68);
+$patriots-grey: rgb(176,183,188);
+$patriots-red: rgb(198,12,48);
+
+
+$saints-black: rgb(16,24,31);
+$saints-yellow: rgb(211,188,141);
+
+
+$giants-blue: rgb(1,35,82);
+$giants-grey: rgb(155,161,162);
+$giants-red: rgb(163,13,45);
+
+
+$jets-green: rgb(0,63,45);
+$jets-white: rgb(255,255,255);
+
+
+$raiders-black: rgb(0,0,0);
+$raiders-grey: rgb(165,172,175);
+
+
+$eagles-dark-grey: rgb(165,172,175);
+$eagles-green: rgb(0,76,84);
+$eagles-grey: rgb(186,202,211);
+
+
+$steelers-black: rgb(0,0,0);
+$steelers-yellow: rgb(255,182,18);
+
+
+$seahawks-blue: rgb(0,34,68);
+$seahawks-green: rgb(105,190,40);
+$seahawks-grey: rgb(165,172,175);
+
+
+$buccaneers-black: rgb(10,10,8);
+$buccaneers-grey: rgb(177,186,191);
+$buccaneers-orange: rgb(255,121,0);
+$buccaneers-red: rgb(213,10,10);
+
+
+$titans-blue: rgb(68,149,209);
+$titans-dark-blue: rgb(0,42,92);
+$titans-grey: rgb(187,196,202);
+$titans-red: rgb(218,33,40);
+
+
+$redskins-red: rgb(63,16,16);
+$redskins-yellow: rgb(255,182,18);
