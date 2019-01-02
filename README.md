@@ -1,6 +1,6 @@
 # Traveling Fan
 
-#### A web-based reference for post NFL game sightseeing when traveling to unfamiliar cities.
+#### A web-based reference for post-NFL game sightseeing when traveling to unfamiliar cities.
 
 ### Installation Steps
 
