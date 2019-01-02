@@ -22,22 +22,18 @@
 
 
 .x-icon {
-    height: 60px;
-    position: absolute;
-    top: 0;
-    left: 0;
-    background-color: #F16857;
-    border: 5px solid #F16857;
-    border-radius: 60px;
-    &:hover {
-      // opacity: .7;
-      background-color: white;
-      border: 5px solid white;
-    }
-}
-
-.x-icon:hover {
-  cursor: pointer;
+  height: 45px;
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  background-color: #F16857;
+  border: 2px solid #F16857;
+  border-radius: 45px;
+  &:hover {
+    cursor: pointer;
+    background-color: #fff;
+    border: 2px solid #fff;
+  }
 }
 
 .carot {
@@ -47,7 +43,7 @@
   margin: 5px;
   padding: 85px 5px;
   &:hover {
-    color: red;
+    color: lightblue;
   }
 }
 
