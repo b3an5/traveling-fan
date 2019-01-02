@@ -4,8 +4,7 @@
 
 ### Installation Steps
 
-- git clone https://github.com/geet084/traveling-fan.git
+  git clone https://github.com/geet084/traveling-fan.git
 
-- npm install
-
-- npm start
+  npm install
+  npm start
