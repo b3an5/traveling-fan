@@ -58,11 +58,3 @@ select{
   width: 331px;
   &:hover { @include inputHoverStyling() }
 }
-
-// TODO: SUPPOSED TO CHANGE DROPDOWN COLORING
-// select option { 
-//   color: black;
-//   &:first-child {
-//     background-color: $nfl-red;
-//   }
-// }

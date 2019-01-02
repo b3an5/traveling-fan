@@ -1,4 +1,5 @@
-@import "teamColors.scss";
+@import 'teamColors.scss';
+
 $black-outline: -1px -1px 0 #000, 1px -1px 0 #000, 
                 -1px 1px 0 #000, 1px 1px 0 #000;
 $reg-bg: 0.5;
@@ -23,20 +24,11 @@ article {
   margin: 10px;
   color: white;
   text-shadow: $black-outline;
-  background-image: radial-gradient(circle, rgba(255, 255, 255, 0.5), rgba(0, 0, 0, 0.5)); 
-  // transition: .3s all ease; 
+  &:hover {
+    cursor: pointer;
+    border: 2px solid white;
+  }
 }
-
-article:hover {
-  cursor: pointer;
-  border: 2px solid white;
-  background-image: radial-gradient(circle, rgba(255, 255, 255, 0.95), rgba(0, 0, 0, 0.95));
-}
-
-// .icon-img {
-//   max-height: 175px;
-//   max-width: 175px;
-// }
 
 .icon-img {
   height: 6rem;
@@ -146,9 +138,9 @@ h2 {
 }
 
 .jacksonville-jaguars {
-  @include icon-bg($jaguars-green, $jaguars-brown, $reg-bg);
+  @include icon-bg($jaguars-green, $jaguars-gold, $reg-bg);
   &:hover {
-    @include icon-bg($jaguars-yellow, $jaguars-green, $hov-bg);
+    @include icon-bg($jaguars-gold, $jaguars-green, $hov-bg);
   }
 }
 
@@ -167,9 +159,9 @@ h2 {
 }
 
 .los-angeles-rams {
-  @include icon-bg($rams-blue, $rams-yellow, $reg-bg);
+  @include icon-bg($rams-blue, $rams-bronze, $reg-bg);
   &:hover {
-    @include icon-bg($rams-yellow, $rams-blue, $hov-bg);
+    @include icon-bg($rams-bronze, $rams-blue, $hov-bg);
   }
 }
 
@@ -195,9 +187,9 @@ h2 {
 }
 
 .new-orleans-saints {
-  @include icon-bg($saints-yellow, $saints-black, $reg-bg);
+  @include icon-bg($saints-gold, $saints-black, $reg-bg);
   &:hover {
-    @include icon-bg($saints-black, $saints-yellow, $hov-bg);
+    @include icon-bg($saints-black, $saints-gold, $hov-bg);
   }
 }
 
@@ -223,9 +215,9 @@ h2 {
 }
 
 .philadelphia-eagles {
-  @include icon-bg($eagles-green, $eagles-grey, $reg-bg);
+  @include icon-bg($eagles-green, $eagles-silver, $reg-bg);
   &:hover {
-    @include icon-bg($eagles-dark-grey, $eagles-green, $hov-bg);
+    @include icon-bg($eagles-grey, $eagles-green, $hov-bg);
   }
 }
 
@@ -237,9 +229,9 @@ h2 {
 }
 
 .san-francisco-49ers {
-  @include icon-bg($_49ers-red, $_49ers-yellow, $reg-bg);
+  @include icon-bg($_49ers-red, $_49ers-gold, $reg-bg);
   &:hover {
-    @include icon-bg($_49ers-yellow, $_49ers-red, $hov-bg);
+    @include icon-bg($_49ers-gold, $_49ers-red, $hov-bg);
   }
 }
 
