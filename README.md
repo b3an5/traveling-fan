@@ -12,14 +12,15 @@
 
 ### Background/About
 
-#### This project offered us an introduction to React concepts.  As Turing students, this was our first opportunity to understand the benefits of working with React rather than regular ES6 classes.  Datasets were made by our group members and we were required to make an API fetch from Heroku.  We were also given the opportunity to use SASS/SCSS styling and implement a testing suite.
+#### This project offered us an introduction to React concepts.  As Turing students, this was our first opportunity to understand the benefits of working with React rather than regular ES6 classes.  Datasets were made by our group members and we were required to make an API fetch from Heroku.  We were also given the opportunity to use Sass/Scss styling and implement a testing suite.
 
 ### Primary Technologies Used
 
-- React
+- ReactJS
+- JSX
 - Jest
 - Enzyme
-- Sass/Scss
+- Sass
 - Heroku API fetch
 
 ### Next Steps
