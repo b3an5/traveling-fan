@@ -1,0 +1,94 @@
+$card-width: 45vw;
+
+@mixin bg-border ($bg, $border) {
+  background-color: $bg;
+  border: $border;
+}
+
+a {
+  color: $nfl-blue;
+  padding: 0 0 5px 0;
+  &:hover {
+    color: $nfl-red;
+  }
+}
+
+.card {
+  @include bg-border(white, (5px, solid, black));
+  border-radius: 5px;
+  box-shadow: 2px 2px 8px 1px grey;
+  left: 27%;
+  margin: 0 auto;
+  position: absolute;
+  text-align: center;
+  top: 185px;
+  width: $card-width;
+  z-index: 3;
+}
+
+.card-btn {
+  @include bg-border(#000, (1px, solid));
+  border-radius: 10px;
+  color: white;
+  font-size: 1.5em;
+  margin: 10px auto;
+  padding: 10px;
+  &:hover {
+    background-color: white;
+    color: black;
+    cursor: pointer;
+  }
+}
+
+.card-img {
+  width: $card-width;
+}
+
+.caret {
+  cursor: pointer;
+  font-size: 3em;
+  margin: 5px;
+  padding: 85px 5px;
+  position: absolute;
+  &:hover {
+    color: lightblue;
+  }
+}
+
+.city-name {
+  color: white;
+  font-size: 3em;
+  margin: -67% auto 59%;
+  text-shadow:
+		-2px -2px 0 #000,
+		2px -2px 0 #000,
+		-2px 2px 0 #000,
+		2px 2px 0 #000;
+}
+
+.left-caret {
+  left: 0;
+  top: 67%;
+}
+
+.right-caret {
+  right: 0;
+  top: 67%;
+} 
+
+.team-info {
+  padding: 10px;
+}
+
+.x-icon {
+  @include bg-border(#F16857, (2px, solid, #F16857));
+  border-radius: 13px;
+  height: 25px;
+  left: 5px;
+  position: absolute;
+  top: 5px;
+  &:hover {
+    @include bg-border(#fff, (2px, solid, #fff));
+    cursor: pointer;
+  }
+}
