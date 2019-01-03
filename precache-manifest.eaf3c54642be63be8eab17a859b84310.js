@@ -12,10 +12,6 @@ self.__precacheManifest = [
     "url": "/traveling-fan/static/media/nav.ec71cb47.jpg"
   },
   {
-    "revision": "75bae819475d49dc578896777e5a7cfe",
-    "url": "/traveling-fan/static/media/football.75bae819.gif"
-  },
-  {
     "revision": "c9e830dd46ff7992b393d6b88e870e00",
     "url": "/traveling-fan/static/media/586928424-nfl-football-field-wallpaper.c9e830dd.jpg"
   },
@@ -24,19 +20,19 @@ self.__precacheManifest = [
     "url": "/traveling-fan/static/js/runtime~main.8136fc2e.js"
   },
   {
-    "revision": "bce51b641945746d28d0",
-    "url": "/traveling-fan/static/js/main.bce51b64.chunk.js"
+    "revision": "98e5916fe4a72a54b45d",
+    "url": "/traveling-fan/static/js/main.98e5916f.chunk.js"
   },
   {
     "revision": "b6db7eabd25aecadf876",
     "url": "/traveling-fan/static/js/1.b6db7eab.chunk.js"
   },
   {
-    "revision": "bce51b641945746d28d0",
-    "url": "/traveling-fan/static/css/main.c21d8c00.chunk.css"
+    "revision": "98e5916fe4a72a54b45d",
+    "url": "/traveling-fan/static/css/main.e94c8cc4.chunk.css"
   },
   {
-    "revision": "1ef49774941d9b4d570da65fd1ca5cfd",
+    "revision": "47816835d8c45c549f8468447324f438",
     "url": "/traveling-fan/index.html"
   }
 ];
