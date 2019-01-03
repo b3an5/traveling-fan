@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
+import './css/Main.scss';
 import Container from './Container.js'
 import Nav from './Nav.js'
-import './css/Main.scss';
-import loadingGif from './images/football.gif';
 import nflLogo from './images/nfl-logo.png';
 class App extends Component {
   constructor(){
