@@ -31,9 +31,48 @@
 }
 
 .loading-screen {
-  display: flex;
+  background-image: url("https://slack-imgs.com/?c=1&url=http%3A%2F%2Fi.imgur.com%2F4Unb7.jpg");
+  background-size: 100%;
   height: 100vh;
   width: 100vw;
+}
+
+.welcome-text {
+  background: linear-gradient(#0e69ae, #fff);
+  border: 2px solid black;
+  border-radius: 30px;
+  text-align: center;
+  width: 25%;
+  margin: 0 auto;
+  padding: 20px 49px;
+  position: absolute;
+  left: 34.5%;
+  top: 15px;
+}
+
+.welcome-title {
+  font-size: 3em;
+  padding-bottom: 5px;
+}
+
+.welcome-button {
+  position: absolute;
+  top: 50vh;
+  left: 37%;
+  width: 25%;
+  height: 10%;
+  border: 6px solid white;
+  border-radius: 56px;
+  font-size: 3em;
+  color: white;
+  background-color: black;
+  &:hover {
+    border: 6px solid black;
+    color: black;
+    background-color: white;
+    cursor: pointer;
+    transition: .2s
+  }
 }
 
 .loading-image {
