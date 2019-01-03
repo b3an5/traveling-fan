@@ -10,6 +10,7 @@ class App extends Component {
 
     this.state = {
       nflTeams: null,
+      nflCities: null,
       cities: null,
       isLoading: true,
       allTeams: null,
@@ -37,7 +38,8 @@ class App extends Component {
 
     this.getData('cities').then((city) => {
       this.setState({
-        cities: this.matchCitiesToTeams(city.cities)
+        cities: this.matchCitiesToTeams(city.cities),
+        nflCities: city.cities
       })
     }).catch(errrr => console.log(errrr))
   }
@@ -58,25 +60,41 @@ class App extends Component {
   
 
   findSelectedDivision = (input) => { 
-    let matched; 
+    let matchedTeams;
 
     if (input === 'all') {
-      this.setState({ nflTeams: this.state.allTeams })
+      this.setState({
+        nflTeams: this.state.allTeams,
+        nflCities: this.state.cities
+      })
     } else if (input === 'AFC' || input === 'NFC') {
-      matched = this.state.allTeams.filter(team => {
+      matchedTeams = this.state.allTeams.filter(team => {
         return team.division.includes(input);
       })
 
-      this.setState({nflTeams: matched})
-
+      this.setState({
+        nflTeams: matchedTeams,
+        nflCities: this.findMatchingCities(input, matchedTeams)
+      })
     } else {
-      matched = this.state.allTeams.filter(team => {
+      matchedTeams = this.state.allTeams.filter(team => {
         return team.division === input;
       })
 
-      this.setState({nflTeams: matched})
-
+      this.setState({
+        nflTeams: matchedTeams,
+        nflCities: this.findMatchingCities(input, matchedTeams)
+      })
     }
+  }
+
+  findMatchingCities = (input, teams) => {
+    return teams.map(team => {
+      let matchingCities = this.state.cities.filter(city => {
+        return city.name === team.city
+      })
+      return matchingCities[0];
+    })
   }
 
   showHomeScreen = () => {
@@ -139,9 +157,9 @@ class App extends Component {
               findSelectedDivision={this.findSelectedDivision} />
           </div>
           <div className="flex">
-            <Container 
-              nflTeams={this.state.nflTeams} 
-              cities={this.state.cities} />
+            <Container
+              nflTeams={this.state.nflTeams}
+              cities={this.state.nflCities} />
           </div>
         </div>
       );
