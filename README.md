@@ -23,6 +23,9 @@
 - Sass
 - Heroku API fetch
 
+### Deployed Website
+#### https://geet084.github.io/traveling-fan/
+
 ### Next Steps
 #### Future iterations of the project could include:
 
