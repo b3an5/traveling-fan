@@ -13,7 +13,7 @@ function City(props) {
       <img className="card-img"
            src={props.currentCity.city_image}
            alt="city" />
-      <h2>{props.currentCity.name}, {props.currentCity.state}</h2>
+      <h2 className="city-name">{props.currentCity.name}, {props.currentCity.state}</h2>
       <h2>Population: {props.currentCity.population}</h2>
         {
           props.currentCity.attractions.map((attraction) => {

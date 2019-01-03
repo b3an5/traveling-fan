@@ -22,13 +22,13 @@
 
 
 .x-icon {
-  height: 45px;
+  height: 25px;
   position: absolute;
   top: 5px;
   left: 5px;
   background-color: #F16857;
   border: 2px solid #F16857;
-  border-radius: 45px;
+  border-radius: 13px;
   &:hover {
     cursor: pointer;
     background-color: #fff;
@@ -60,4 +60,32 @@
 .card-btn {
   margin: 10px auto;
   padding: 10px;
+  border: 1px solid;
+  border-radius: 10px;
+  color: white;
+  background-color: black;
+  font-size: 1.5em;
+  &:hover {
+    color: black;
+    background-color: white;
+    cursor: pointer;
+  }
+}
+
+a {
+  color: $nfl-blue;
+  &:hover {
+    color: $nfl-red;
+  }
+}
+
+.city-name {
+  color: white;
+  text-shadow:
+		-2px -2px 0 #000,
+		2px -2px 0 #000,
+		-2px 2px 0 #000,
+		2px 2px 0 #000;
+  font-size: 3em;
+  margin: -500px auto 455px;
 }
