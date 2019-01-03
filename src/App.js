@@ -12,7 +12,8 @@ class App extends Component {
       nflTeams: null,
       cities: null,
       isLoading: true,
-      allTeams: null
+      allTeams: null,
+      homeScreen: false
     } 
   }
 
@@ -78,13 +79,28 @@ class App extends Component {
     }
   }
 
+  showHomeScreen = () => {
+    this.setState({
+      homeScreen: true
+    })
+  }
+
   render() {
     if (this.state.isLoading) {
       return (
         <div className="loading-screen">
-          <img className="loading-image"
-               src={loadingGif}
-               alt="loading screen" />
+          <div className="welcome-text">
+            <h2 className="welcome-title">The Traveling Fan</h2>
+          </div>
+        </div>
+      )
+    } else if (this.state.isLoading === false && this.state.homeScreen === false) {
+      return (
+        <div className="loading-screen">
+          <div className="welcome-text">
+            <h2 className="welcome-title">The Traveling Fan</h2>
+          </div>
+          <button onClick={this.showHomeScreen} className='welcome-button'>LET'S GO!</button>
         </div>
       )
     } else if (this.state.nflTeams.length === 0) { 
@@ -107,7 +123,7 @@ class App extends Component {
           </div>
         </div>
       )
-    } else {
+    } else if (this.state.homeScreen) {
       return (
         <div className="app">
           <div className='app-title-area'>
