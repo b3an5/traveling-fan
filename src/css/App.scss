@@ -31,6 +31,9 @@
 }
 
 .loading-screen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   background-image: url("https://slack-imgs.com/?c=1&url=http%3A%2F%2Fi.imgur.com%2F4Unb7.jpg");
   background-size: 100%;
   height: 100vh;
@@ -43,11 +46,8 @@
   border-radius: 30px;
   text-align: center;
   width: 25%;
-  margin: 0 auto;
-  padding: 20px 49px;
-  position: absolute;
-  left: 34.5%;
-  top: 15px;
+  margin-bottom: 20%;
+  margin-top: 13px;
 }
 
 .welcome-title {
@@ -56,9 +56,6 @@
 }
 
 .welcome-button {
-  position: absolute;
-  top: 50vh;
-  left: 37%;
   width: 25%;
   height: 10%;
   border: 6px solid white;
