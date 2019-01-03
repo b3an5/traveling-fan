@@ -12,7 +12,8 @@ function TeamIcon(props) {
         onClick={props.switchToPopup}
         alt="team logo" /> 
       <h2 className="icon-text"
-          onClick={props.switchToPopup}>
+        onClick={props.switchToPopup}
+      >
         {props.nflTeam.name}
       </h2>
     </article>

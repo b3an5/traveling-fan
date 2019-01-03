@@ -40,10 +40,12 @@ ShallowWrapper {
           onClick={[MockFunction]}
         />,
         <h2
+          className="icon-text"
           onClick={[MockFunction]}
         />,
       ],
       "className": "arizona-cardinals",
+      "onClick": [MockFunction],
     },
     "ref": null,
     "rendered": Array [
@@ -67,6 +69,7 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "children": undefined,
+          "className": "icon-text",
           "onClick": [MockFunction],
         },
         "ref": null,
@@ -89,10 +92,12 @@ ShallowWrapper {
             onClick={[MockFunction]}
           />,
           <h2
+            className="icon-text"
             onClick={[MockFunction]}
           />,
         ],
         "className": "arizona-cardinals",
+        "onClick": [MockFunction],
       },
       "ref": null,
       "rendered": Array [
@@ -116,6 +121,7 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "children": undefined,
+            "className": "icon-text",
             "onClick": [MockFunction],
           },
           "ref": null,

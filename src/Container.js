@@ -32,13 +32,14 @@ export default class Container extends Component {
   }
 
   getTargetWord(event) {
-    let teamName;
+    let teamName= '';
     let target = event.target.className;
+    let targetParent = event.target.parentElement;
 
     if (target === 'icon-img' || target === 'icon-text') {
-      teamName = event.target.parentElement.className.split('-')
+      teamName = targetParent.className.split('-');
     } else teamName = target.split('-');
-
+    
     let index = teamName[teamName.length - 1];
     return index.charAt(0).toUpperCase() + index.slice(1);
   }

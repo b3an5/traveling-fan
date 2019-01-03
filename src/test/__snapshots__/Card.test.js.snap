@@ -50,7 +50,7 @@ ShallowWrapper {
           alt="icon"
           className="x-icon"
           onClick={[MockFunction]}
-          src="xIcon.svg"
+          src="x-icon.svg"
         />,
         <img
           alt="NFL team"
@@ -105,7 +105,7 @@ ShallowWrapper {
           "alt": "icon",
           "className": "x-icon",
           "onClick": [MockFunction],
-          "src": "xIcon.svg",
+          "src": "x-icon.svg",
         },
         "ref": null,
         "rendered": null,
@@ -221,7 +221,7 @@ ShallowWrapper {
             alt="icon"
             className="x-icon"
             onClick={[MockFunction]}
-            src="xIcon.svg"
+            src="x-icon.svg"
           />,
           <img
             alt="NFL team"
@@ -276,7 +276,7 @@ ShallowWrapper {
             "alt": "icon",
             "className": "x-icon",
             "onClick": [MockFunction],
-            "src": "xIcon.svg",
+            "src": "x-icon.svg",
           },
           "ref": null,
           "rendered": null,

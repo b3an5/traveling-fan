@@ -3,9 +3,8 @@ import Container from '../Container.js';
 import { shallow } from 'enzyme';
 import { nflTeams, cities } from '../dataset/nfl-cities.js'
 
-const mockTeamClick = {target: {parentElement: {className: 'arizona-cardinals'}}}
-const mockWord = {target: {parentElement: {className: 'denver-broncos'}}}
-const mockSetCarouselIndex = jest.fn()
+const mockTeamClick = {target: {className: 'arizona-cardinals'}}
+const mockImgClick = {target: {className: 'denver-broncos'}}
 
 describe('Container', () => {
 
@@ -46,7 +45,7 @@ describe('Container', () => {
   })
 
   it('should return the last word (team name) in an NFL team with an uppercase first letter', () => {
-    expect(wrapper.instance().getTargetWord(mockWord)).toEqual('Broncos')
+    expect(wrapper.instance().getTargetWord(mockImgClick)).toEqual('Broncos')
   })
 
   it('should update state to display all team icons', () => {

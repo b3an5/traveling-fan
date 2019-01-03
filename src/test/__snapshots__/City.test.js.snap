@@ -50,14 +50,16 @@ ShallowWrapper {
           alt="icon"
           className="x-icon"
           onClick={[MockFunction]}
-          src="xIcon.svg"
+          src="x-icon.svg"
         />,
         <img
           alt="city"
           className="card-img"
           src="http://res.cloudinary.com/simpleview/image/upload/v1529338630/clients/phoenix/58468198_2b66_4f1e_8687_e26d986f678a_10c75a12-fe18-44d2-ab79-ed92fdb8ff6f.jpg"
         />,
-        <h2>
+        <h2
+          className="city-name"
+        >
           Glendale
           , 
           Arizona
@@ -143,7 +145,7 @@ ShallowWrapper {
           "alt": "icon",
           "className": "x-icon",
           "onClick": [MockFunction],
-          "src": "xIcon.svg",
+          "src": "x-icon.svg",
         },
         "ref": null,
         "rendered": null,
@@ -172,6 +174,7 @@ ShallowWrapper {
             ", ",
             "Arizona",
           ],
+          "className": "city-name",
         },
         "ref": null,
         "rendered": Array [
@@ -375,14 +378,16 @@ ShallowWrapper {
             alt="icon"
             className="x-icon"
             onClick={[MockFunction]}
-            src="xIcon.svg"
+            src="x-icon.svg"
           />,
           <img
             alt="city"
             className="card-img"
             src="http://res.cloudinary.com/simpleview/image/upload/v1529338630/clients/phoenix/58468198_2b66_4f1e_8687_e26d986f678a_10c75a12-fe18-44d2-ab79-ed92fdb8ff6f.jpg"
           />,
-          <h2>
+          <h2
+            className="city-name"
+          >
             Glendale
             , 
             Arizona
@@ -468,7 +473,7 @@ ShallowWrapper {
             "alt": "icon",
             "className": "x-icon",
             "onClick": [MockFunction],
-            "src": "xIcon.svg",
+            "src": "x-icon.svg",
           },
           "ref": null,
           "rendered": null,
@@ -497,6 +502,7 @@ ShallowWrapper {
               ", ",
               "Arizona",
             ],
+            "className": "city-name",
           },
           "ref": null,
           "rendered": Array [

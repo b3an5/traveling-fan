@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`App should match the snapshot with all data passed correctly to the Popup 1`] = `
+exports[`App should match the snapshot with all data passed correctly to the Container 1`] = `
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <App />,
@@ -17,11 +17,15 @@ ShallowWrapper {
     "key": undefined,
     "nodeType": "host",
     "props": Object {
-      "children": <img
-        alt="loading screen"
-        className="loading-image"
-        src="football.gif"
-      />,
+      "children": <div
+        className="welcome-text"
+      >
+        <h2
+          className="welcome-title"
+        >
+          The Traveling Fan
+        </h2>
+      </div>,
       "className": "loading-screen",
     },
     "ref": null,
@@ -30,13 +34,27 @@ ShallowWrapper {
       "key": undefined,
       "nodeType": "host",
       "props": Object {
-        "alt": "loading screen",
-        "className": "loading-image",
-        "src": "football.gif",
+        "children": <h2
+          className="welcome-title"
+        >
+          The Traveling Fan
+        </h2>,
+        "className": "welcome-text",
       },
       "ref": null,
-      "rendered": null,
-      "type": "img",
+      "rendered": Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "The Traveling Fan",
+          "className": "welcome-title",
+        },
+        "ref": null,
+        "rendered": "The Traveling Fan",
+        "type": "h2",
+      },
+      "type": "div",
     },
     "type": "div",
   },
@@ -46,11 +64,15 @@ ShallowWrapper {
       "key": undefined,
       "nodeType": "host",
       "props": Object {
-        "children": <img
-          alt="loading screen"
-          className="loading-image"
-          src="football.gif"
-        />,
+        "children": <div
+          className="welcome-text"
+        >
+          <h2
+            className="welcome-title"
+          >
+            The Traveling Fan
+          </h2>
+        </div>,
         "className": "loading-screen",
       },
       "ref": null,
@@ -59,13 +81,27 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
-          "alt": "loading screen",
-          "className": "loading-image",
-          "src": "football.gif",
+          "children": <h2
+            className="welcome-title"
+          >
+            The Traveling Fan
+          </h2>,
+          "className": "welcome-text",
         },
         "ref": null,
-        "rendered": null,
-        "type": "img",
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "The Traveling Fan",
+            "className": "welcome-title",
+          },
+          "ref": null,
+          "rendered": "The Traveling Fan",
+          "type": "h2",
+        },
+        "type": "div",
       },
       "type": "div",
     },
