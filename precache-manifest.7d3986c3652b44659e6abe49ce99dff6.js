@@ -24,19 +24,19 @@ self.__precacheManifest = [
     "url": "/traveling-fan/static/js/runtime~main.8136fc2e.js"
   },
   {
-    "revision": "37aad2b1190c0c7da080",
-    "url": "/traveling-fan/static/js/main.37aad2b1.chunk.js"
+    "revision": "bce51b641945746d28d0",
+    "url": "/traveling-fan/static/js/main.bce51b64.chunk.js"
   },
   {
-    "revision": "2b7b08dd0faeb52339ce",
-    "url": "/traveling-fan/static/js/1.2b7b08dd.chunk.js"
+    "revision": "b6db7eabd25aecadf876",
+    "url": "/traveling-fan/static/js/1.b6db7eab.chunk.js"
   },
   {
-    "revision": "37aad2b1190c0c7da080",
-    "url": "/traveling-fan/static/css/main.9077da6c.chunk.css"
+    "revision": "bce51b641945746d28d0",
+    "url": "/traveling-fan/static/css/main.c21d8c00.chunk.css"
   },
   {
-    "revision": "48bc55bcf41023e76d342d7eb6f9b650",
+    "revision": "1ef49774941d9b4d570da65fd1ca5cfd",
     "url": "/traveling-fan/index.html"
   }
 ];
